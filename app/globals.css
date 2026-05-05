@@ -1,26 +1,199 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@theme {
+  --color-primary: #391A67;
+  --color-secondary: #9b0093;
+  --color-tertiary: #FFFFFF;
+  --color-quarto: #BB99F3;
+  --color-error: #961B4D;
+  --breakpoint-xxs: 347px;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-primary);
+  color: var(--color-tertiary);
+  font-family: 'Inter', sans-serif;
+}
+
+.shadow_container {
+  filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.8));
+  width: min(90vw, 500px);
+  height: min(90vw, 500px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cut_photo {
+  height: 100%;
+  background: url(/images/artisticaFemm.webp);
+  background-size: cover;
+  background-position: 70% center;
+  background-repeat: no-repeat;
+}
+.cut_photo2{
+  height: 100%;
+  background: url(/images/ballstrisc.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.cut_photo3{
+  height: 100%;
+  background: url(/images/artisticaFemmVert.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.cut_photo, .cut_photo2, .cut_photo3 {
+  width: 100%;
+  clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%); /* Ridotto il taglio per mobile */
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .cut_photo, .cut_photo2, .cut_photo3 {
+    clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%); /* Ancora meno taglio su mobile */
+  }
+}
+
+.titleP{
+  opacity: 1;
+  animation: opacityT 3s ease-out 1;
+}
+@keyframes opacityT {
+  0% {
+    opacity: 1;
+  }
+  5% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  15% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.section_1_observer .photo_1,
+.section_1_observer .photo_2,
+.section_1_observer .photo_3 {
+    opacity: 0;
+}
+
+/* Quando la sezione è attiva (visibile) */
+.section_1_observer.active .photo_1 {
+    animation: opacity_1 3s ease-out forwards;
+}
+.section_1_observer.active .photo_2 {
+    animation: opacity_2 3s ease-out forwards;
+}
+.section_1_observer.active .photo_3 {
+    animation: opacity_3 3s ease-out forwards;
+}
+
+@keyframes opacity_1 {
+  0% {
+    opacity: 0;
+    transform: translatey(-500px);
+  }
+  100% {
+    opacity: 1;
+    transform: translatey(0);
+  }
+}
+
+@keyframes opacity_2 {
+  0% {
+    opacity: 0;
+    transform: translateY(-500px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes opacity_3 {
+  0% {
+    opacity: 0;
+    transform: translateY(-500px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section_2_observer .title_section_2,
+.section_2_observer .square_section_2 {
+  opacity: 0;
+  transform: scale(0.1);
+}
+
+.section_2_observer.active .title_section_2,
+.section_2_observer.active .square_section_2 {
+  animation: scale_section_2_observer 3s ease-out forwards;
+}
+
+@keyframes scale_section_2_observer {
+  0% {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+  100% {
+    opacity: 1;
+    transform:scale(1);
+  }
+}
+
+.bg-section_accademy{
+  background: url("../public/images/attachome.jpg");
+  background-size: cover;
+  background-position:80% center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.text_cont{
+ -webkit-text-stroke: 0.5px white;
+  text-stroke: 0.5px white;
+  color: transparent;
+}
+.text_cont_2{
+ -webkit-text-stroke: 0.5px var(--color-primary);
+  text-stroke: 0.5px var(--color-primary);
+  color: white;
+}
+
+.bg_centri{
+  background: linear-gradient(rgba(0, 0, 0, 0.4)), url("../public/images/centri.png");
+  background-size: cover;
+  background-position: center;
+}
+.bg_campi{
+    background: linear-gradient(rgba(0, 0, 0, 0.4)), url("../public/images/allenamentogroup.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.bg_istruttori{
+    background: linear-gradient(rgba(0, 0, 0, 0.4)), url("../public/images/istruttori.webp");
+  background-size: cover;
+  background-position: center;
 }

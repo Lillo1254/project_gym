@@ -1,65 +1,334 @@
-import Image from "next/image";
+import { FeatureCard } from './components/card/CardArticles';
+import Image from 'next/image';
+import { Activity, Zap, Target, ArrowRight } from 'lucide-react';
+import ObserverImageHero from './components/componentsObserver/ObserverImageHero';
+import Link from 'next/link';
 
 export default function Home() {
+
+  const plans = [
+    { name: 'Steel', price: '89', features: ['3 Sessioni/settimana', 'Analisi Video', 'Accesso Lab'] },
+    { name: 'Linear', price: '129', features: ['Sessioni Illimitate', 'Biomeccanica Pro', 'Coach Personale'], pro: true },
+    { name: 'Wood', price: '59', features: ['2 Sessioni/settimana', 'Mobilità Base', 'Accesso App'] }
+  ];
+
+console.log(
+  "%c Alessandro Lucia %c alessandroluciaroma@gmail.com %c sviluppato in Next.js e Tailwind CSS ",
+  "color: #ffffff; background-color: #db2777; padding: 6px 12px; font-weight: bold; border-radius: 4px 0 0 4px;", 
+  "color: #ffffff; background-color: #9333ea; padding: 6px 12px; font-weight: bold; border-radius: 0 4px 4px 0;", 
+  "color: #ffffff; background-color: #4b5563; padding: 6px 12px; font-weight: bold; border-radius: 4px;" 
+);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+    <main className="bg-gradient-to-b from-primary to-tertiary">
+      
+      <section className="relative h-[90svh] md:min-h-screen flex items-center justify-center overflow-hidden pt-30 md:py-20">
+  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-75 md:w-150 h-75 md:h-150 bg-secondary/20 rounded-full blur-[80px] md:blur-[120px] -z-10" />
+
+  <div className="text-center px-6 pt-15 w-full flex flex-col items-center">
+    
+    
+    <h2 className="text-5xl sm:text-6xl md:text-8xl font-black italic uppercase leading-[0.9] tracking-tighter">
+      <span className="text-secondary titleP">F</span>ORZ<span className="text-secondary titleP">A</span> E <br className="md:hidden" />
+      <span className="text-secondary titleP">P</span>REC<span className="text-secondary titleP">IS</span>ION<span className="text-secondary titleP">E</span>
+    </h2>
+
+    
+    <p className="mt-6 text-quarto text-base md:text-xl max-w-2xl mx-auto font-light leading-relaxed">
+      L&apos;evoluzione della ginnastica artistica. Dove la disciplina incontra l&apos;innovazione tecnologica.
+    </p>
+
+    {/* Pulsanti */}
+    <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
+      <button className="w-full sm:w-auto bg-tertiary text-primary px-8 py-4 rounded-sm font-black hover:bg-quarto hover:scale-105 transition-all uppercase tracking-widest">
+        Scopri il metodo
+      </button>
+      <button className="w-full sm:w-auto border border-quarto/30 text-quarto px-8 py-4 rounded-sm font-bold hover:bg-quarto/10 transition-all uppercase tracking-widest">
+        Guarda i dati
+      </button>
     </div>
+
+    
+    <div className="text-center w-full pt-12 flex flex-col items-center gap-2">
+      <h1 className="text-4xl sm:text-6xl md:text-8xl font-black italic uppercase leading-none tracking-tighter">
+        
+        
+        <div className="-translate-x-12 xxs:-translate-x-24 sm:-translate-x-36 md:-translate-x-44 lg:-translate-x-64 transform">
+          STEEL
+        </div>
+        
+        <div className="translate-x-0 xxs:translate-x-0 transform text-secondary titleP">
+          WOOD
+        </div>
+        
+        <div className="translate-x-12 xxs:translate-x-24 sm:translate-x-36 md:translate-x-44 lg:translate-x-64 transform ">
+          LINEAR
+        </div>
+        
+      </h1>
+    </div>
+    
+  </div>
+</section>
+
+      {/* Grid Immagini - Corretta Responsività */}
+      <section className="min-h-50 flex flex-col md:flex-row gap-6 py-12 px-6 justify-center items-center overflow-hidden section_1_observer">
+        {/* Photo 1 */}
+        <div className="shadow_container w-full md:w-1/3 max-w-100 photo_1">
+          <div className="cut_photo h-75 md:h-125"></div>
+        </div>
+        {/* Photo 2 */}
+        <div className="shadow_container w-full md:w-1/3 max-w-100 photo_2">
+          <div className="cut_photo2 h-75 md:h-125"></div>
+        </div>
+        {/* Photo 3 */}
+        <div className="shadow_container w-full md:w-1/3 max-w-100 photo_3">
+          <div className="cut_photo3 h-75 md:h-125"></div>
+        </div>
+      </section>
+
+      {/* Nuova Sezione: DATA TRACKING (Rilevante per il tema Tech) */}
+      <section className="py-24 bg-primary border-y border-quarto/10 section_2_observer">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+            <div>
+              <h2 className="text-secondary font-black italic text-sm tracking-[0.3em] uppercase mb-4 title_section_2">Performance Metrics</h2>
+              <h3 className="text-4xl md:text-6xl font-black uppercase italic leading-none title_section_2">Monitoraggio <br /> in tempo reale</h3>
+            </div>
+            <p className="max-w-md text-quarto/60 font-light text-right title_section_2">
+              Utilizziamo accelerometri e sensori EMG per mappare ogni contrazione muscolare durante l&apos;esecuzione dei grandi attrezzi.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 square_section_2">
+            {[
+              { label: 'Forza G', val: '4.2', unit: 'max', icon: <Zap /> },
+              { label: 'Precisione', val: '99.8', unit: '%', icon: <Target /> },
+              { label: 'Battito', val: '185', unit: 'bpm', icon: <Activity /> },
+              { label: 'Atleti', val: '120', unit: '+', icon: <ArrowRight /> },
+            ].map((stat, i) => (
+              <div key={i} className="p-8 border border-quarto/10 hover:border-secondary transition-colors group">
+                <div className="text-secondary mb-4 group-hover:scale-110 transition-transform">{stat.icon}</div>
+                <div className="text-4xl md:text-5xl font-black italic mb-1">{stat.val}<span className="text-sm ml-1 text-quarto/40">{stat.unit}</span></div>
+                <div className="text-xs uppercase tracking-widest text-quarto/60 font-bold">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Features - Ottimizzate per Mobile */}
+      <section className="max-w-7xl mx-auto px-6 py-24">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <FeatureCard
+            title="Linear Core"
+            desc="Sviluppo della forza isometrica e stabilità dinamica attraverso il controllo motorio avanzato."
+          />
+          <FeatureCard
+            title="Wood Flexibility"
+            desc="Mobilità articolare organica ispirata alla flessibilità del legno, fondamentale per ogni evoluzione."
+          />
+          <FeatureCard
+            title="Steel Power"
+            desc="Potenza esplosiva per salti e rotazioni, costruita con protocolli di allenamento tech-driven."
+          />
+        </div>
+      </section>
+
+      {/* Section Accademia - Corretta Responsività Immagini */}
+      <section className="py-24 bg-section_accademy text-primary min-h-[80vh]">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="relative order-2 lg:order-1">
+            <div className="absolute -top-4 -left-4 w-full h-full border-2 border-secondary/30 -z-10" />
+            <div className="bg-primary/80 h-75 md:h-112.5 w-full flex items-center justify-center overflow-hidden">
+              <span className="text-quarto uppercase tracking-[0.5em] font-bold text-center px-4">Scientific Training Image</span>
+            </div>
+            <div className="absolute -bottom-6 -right-6 bg-secondary/60 text-white p-4 md:p-6 hidden sm:block">
+              <p className="text-2xl md:text-3xl font-black italic">+250%</p>
+              <p className="text-[10px] md:text-xs uppercase tracking-tighter">Precisione del movimento</p>
+            </div>
+          </div>
+
+          <div className="order-1 lg:order-2">
+            <h2 className="text-4xl md:text-5xl font-black uppercase italic leading-none mb-6 text_cont">
+              <span className="text-primary"> L&apos;ACCADEMIA</span>
+              <br /><span className="text-secondary underline decoration-primary">NON È PER TUTTI</span>
+            </h2>
+            <p className="text-base md:text-lg text-tertiary font-light mb-8 leading-relaxed text_cont_2">
+              Non siamo una palestra tradizionale. Utilizziamo sensori di movimento e analisi biomeccanica
+              per trasformare la tua flessibilità organica in una struttura d&apos;acciaio.
+            </p>
+            <ul className="space-y-4 text-tertiary ">
+              {['Analisi Biomeccanica 3D', 'Programmazione Neuro-Motoria', 'Recupero ad alta densità'].map((item, i) => (
+                <li key={i} className="flex items-center space-x-3 group cursor-default">
+                  <span className="w-6 h-px bg-secondary group-hover:w-10 transition-all" />
+                  <span className="font-bold uppercase text-xs md:text-sm tracking-widest">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* section competizioni */}
+      <section className="py-24 bg-primary overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row items-baseline gap-4 mb-12">
+            <h2 className="text-5xl md:text-7xl font-black uppercase italic leading-none">
+              Arena <span className="text-secondary">Dati</span>
+            </h2>
+            <span className="text-quarto/40 uppercase tracking-[0.3em] font-bold text-sm">
+              Archive 2024-2026
+            </span>
+          </div>
+
+          {/* Gallery Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-auto md:h-200">
+
+            {/* Immagine Grande - Main Event */}
+            <div className="md:col-span-2 md:row-span-2 relative group overflow-hidden bg-quarto/10 border border-quarto/20">
+              <div className="absolute inset-0 bg-secondary/20 group-hover:bg-transparent transition-colors duration-500 z-10" />
+              <Image
+                src="https://www.riminitoday.it/~media/horizontal-hi/65385576371270/europei-ginnastica-artistica-rimini-2024-2.jpeg"
+                alt="World Championship"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+              />
+              <div className="absolute bottom-0 left-0 p-8 z-20 translate-y-full group-hover:translate-y-0 transition-transform duration-500 bg-linear-to-t from-primary to-transparent w-full">
+                <p className="text-secondary font-black italic text-xl">WORLD CHAMPIONSHIPS</p>
+                <p className="text-white/60 uppercase text-xs tracking-widest">Berlin - Gold Medal Phase</p>
+              </div>
+            </div>
+
+            {/* Immagine Orizzontale */}
+            <div className="md:col-span-2 md:row-span-1 relative group overflow-hidden bg-quarto/10 border border-quarto/20 h-75 md:h-auto">
+              <Image
+                src="https://imgresizer.eurosport.com/unsafe/1200x0/filters:format(jpeg)/origin-imgresizer.eurosport.com/2021/05/23/3138070-64317128-2560-1440.jpg"
+                alt="National League"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+              />
+              <div className="absolute top-4 right-4 bg-secondary text-primary px-3 py-1 font-black italic text-sm z-20">
+                LIVE DATA
+              </div>
+            </div>
+
+            {/* Immagine Verticale 1 */}
+            <div className="md:col-span-1 md:row-span-1 relative group overflow-hidden bg-quarto/10 border border-quarto/20 h-75 md:h-auto">
+              <Image
+                src="https://www.aicsfirenze.net/wp-content/uploads/2021/03/158100066_274792684058055_7680837354109959849_n.jpg"
+                alt="Tech Analysis"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+              />
+            </div>
+
+            {/* Immagine Verticale 2 - Con CTA interna */}
+            <div className="md:col-span-1 md:row-span-1 relative group overflow-hidden border border-secondary bg-secondary/10 flex items-center justify-center p-6 text-center h-75 md:h-auto">
+              <div>
+                
+                <p className="text-quarto text-xs font-light uppercase tracking-tighter mb-4">Guarda le nostre <br />competizioni</p>
+                <Link href="/competizioni" className="text-[10px] border border-secondary px-4 py-2 hover:bg-secondary hover:text-primary transition-all font-bold">
+                  LE NOSTRE GARE
+                </Link>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 bg-primary relative overflow-hidden">
+        {/* Background Decor */}
+        <div className="absolute top-0 right-50 text-[200px] font-black opacity-[0.53] select-none pointer-events-none italic">
+          LINEAR
+        </div>
+
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl font-black uppercase text-tertiary italic">Piani di Evoluzione</h2>
+            <div className="h-1 w-24 bg-secondary mx-auto mt-4" />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {plans.map((plan, i) => (
+              <div
+                key={i}
+                className={`p-10 border transition-all duration-500 flex flex-col ${plan.pro
+                    ? 'border-secondary bg-secondary/5 scale-105 shadow-2xl shadow-secondary/20'
+                    : 'border-quarto/20 bg-primary hover:border-quarto/50'
+                  }`}
+              >
+                <h3 className="text-xs uppercase tracking-[0.3em] text-quarto mb-2">{plan.name} Membership</h3>
+                <div className="flex items-baseline mb-8">
+                  <span className="text-4xl font-black text-tertiary">€{plan.price}</span>
+                  <span className="text-quarto/50 text-sm ml-2">/mese</span>
+                </div>
+
+                <ul className="grow space-y-4 mb-10">
+                  {plan.features.map((f, j) => (
+                    <li key={j} className="text-tertiary/70 text-sm flex items-center">
+                      <span className="mr-2 text-secondary">▹</span> {f}
+                    </li>
+                  ))}
+                </ul>
+
+                <button className={`w-full py-4 font-bold uppercase tracking-widest text-xs transition ${plan.pro ? 'bg-secondary text-white' : 'bg-tertiary text-primary hover:bg-quarto'
+                  }`}>
+                  Inizia ora
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* last section video */}
+      <section className="relative w-full h-[60vh] md:h-[85vh] bg-primary overflow-hidden flex items-center justify-center">
+        <div className="absolute inset-0 w-full h-full">
+          <video
+            className="w-full h-full object-cover"
+            autoPlay
+            loop
+            muted
+            playsInline
+          >
+            {/* Se hai due video diversi (uno orizzontale e uno verticale) puoi gestirli così: */}
+            <source src="/videos/vediovert.mp4" media="(max-width: 450px)" />
+            <source src="/videos/videoLast50.mp4" media="(min-width: 769px)" />
+
+            {/* Video di fallback se usi un solo video centrale */}
+            {/* <source src="/video/steel-wood-video.mp4" type="video/mp4" />
+            Il tuo browser non supporta il tag video. */}
+          </video>
+
+
+        </div>
+
+        <div className="relative z-10 text-center px-6">
+          <h2 className="text-4xl md:text-7xl font-black uppercase italic tracking-wider ">
+            <div className="-translate-x-12 xxs:-translate-x-24 sm:-translate-x-36 md:-translate-x-44 lg:-translate-x-64 transform text-white/50">
+          STEEL
+        </div>
+        
+        <div className="translate-x-0 xxs:translate-x-0 transform text-secondary/50">
+          WOOD
+        </div>
+        
+        <div className="translate-x-12 xxs:translate-x-24 sm:translate-x-36 md:translate-x-44 lg:translate-x-64 transform text-white/50">
+          LINEAR
+        </div>
+          </h2>
+        </div>
+      </section>
+
+
+      {/* function observer */}
+      <ObserverImageHero target="section_1_observer" classAdd="active" percent={0.2} />
+      <ObserverImageHero target="section_2_observer" classAdd="active" percent={0.4} />
+    </main>
   );
 }
