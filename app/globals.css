@@ -1,10 +1,19 @@
 @import "tailwindcss";
 
-@theme {
+/* @theme {
   --color-primary: #391A67;
   --color-secondary: #9b0093;
   --color-tertiary: #FFFFFF;
   --color-quarto: #BB99F3;
+  --color-error: #961B4D;
+  --breakpoint-xxs: 347px;
+} */
+
+@theme {
+  --color-primary: #1E3A8A;
+  --color-secondary: #F59E0B;
+  --color-tertiary: #1F2937;
+  --color-quarto: #F9FAFB;
   --color-error: #961B4D;
   --breakpoint-xxs: 347px;
 }
@@ -139,6 +148,30 @@ body {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (min-width: 1024px) {
+  @keyframes opacity_1 {
+    0% {
+      opacity: 0;
+      transform: translateX(-500px); /* Entra da sinistra */
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes opacity_3 {
+    0% {
+      opacity: 0;
+      transform: translateX(500px); /* Entra da destra */
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
 }
 

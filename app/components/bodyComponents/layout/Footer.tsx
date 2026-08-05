@@ -9,7 +9,7 @@ export default function Footer() {
           
           {/* COLONNA 1: BRAND E CODICE FISCALE */}
           <div className="space-y-6">
-            <h2 className="text-2xl font-black tracking-tighter uppercase italic">
+            <h2 className="text-2xl font-black tracking-tighter uppercase italic text-quarto">
               STEEL <span className="text-secondary">WOOD</span> LINEAR
             </h2>
             <p className="text-white text-sm leading-relaxed">

@@ -28,7 +28,7 @@ console.log(
   <div className="text-center px-6 pt-15 w-full flex flex-col items-center">
     
     
-    <h2 className="text-5xl sm:text-6xl md:text-8xl font-black italic uppercase leading-[0.9] tracking-tighter">
+    <h2 className="text-5xl sm:text-6xl md:text-8xl font-black italic uppercase leading-[0.9] tracking-tighter text-quarto">
       <span className="text-secondary titleP">F</span>ORZ<span className="text-secondary titleP">A</span> E <br className="md:hidden" />
       <span className="text-secondary titleP">P</span>REC<span className="text-secondary titleP">IS</span>ION<span className="text-secondary titleP">E</span>
     </h2>
@@ -40,10 +40,10 @@ console.log(
 
     {/* Pulsanti */}
     <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
-      <button className="w-full sm:w-auto bg-tertiary text-primary px-8 py-4 rounded-sm font-black hover:bg-quarto hover:scale-105 transition-all uppercase tracking-widest">
+      <button className="w-full sm:w-auto bg-secondary text-primary px-8 py-4 rounded-sm font-black hover:bg-quarto hover:scale-105 transition-all uppercase tracking-widest">
         Scopri il metodo
       </button>
-      <button className="w-full sm:w-auto border border-quarto/30 text-quarto px-8 py-4 rounded-sm font-bold hover:bg-quarto/10 transition-all uppercase tracking-widest">
+      <button className="w-full sm:w-auto border border-quarto/30 text-quarto px-8 py-4 rounded-sm font-bold hover:bg-quarto hover:text-primary hover:scale-105 transition-all uppercase tracking-widest">
         Guarda i dati
       </button>
     </div>
@@ -53,7 +53,7 @@ console.log(
       <h1 className="text-4xl sm:text-6xl md:text-8xl font-black italic uppercase leading-none tracking-tighter">
         
         
-        <div className="-translate-x-12 xxs:-translate-x-24 sm:-translate-x-36 md:-translate-x-44 lg:-translate-x-64 transform">
+        <div className="-translate-x-12 xxs:-translate-x-24 sm:-translate-x-36 md:-translate-x-44 lg:-translate-x-64 transform text-quarto">
           STEEL
         </div>
         
@@ -61,7 +61,7 @@ console.log(
           WOOD
         </div>
         
-        <div className="translate-x-12 xxs:translate-x-24 sm:translate-x-36 md:translate-x-44 lg:translate-x-64 transform ">
+        <div className="translate-x-12 xxs:translate-x-24 sm:translate-x-36 md:translate-x-44 lg:translate-x-64 transform text-quarto">
           LINEAR
         </div>
         
@@ -93,7 +93,7 @@ console.log(
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
             <div>
               <h2 className="text-secondary font-black italic text-sm tracking-[0.3em] uppercase mb-4 title_section_2">Performance Metrics</h2>
-              <h3 className="text-4xl md:text-6xl font-black uppercase italic leading-none title_section_2">Monitoraggio <br /> in tempo reale</h3>
+              <h3 className="text-4xl md:text-6xl text-quarto font-black uppercase italic leading-none title_section_2">Monitoraggio <br /> in tempo reale</h3>
             </div>
             <p className="max-w-md text-quarto/60 font-light text-right title_section_2">
               Utilizziamo accelerometri e sensori EMG per mappare ogni contrazione muscolare durante l&apos;esecuzione dei grandi attrezzi.
@@ -107,10 +107,10 @@ console.log(
               { label: 'Battito', val: '185', unit: 'bpm', icon: <Activity /> },
               { label: 'Atleti', val: '120', unit: '+', icon: <ArrowRight /> },
             ].map((stat, i) => (
-              <div key={i} className="p-8 border border-quarto/10 hover:border-secondary transition-colors group">
+              <div key={i} className="p-8 border border-quarto hover:border-secondary transition-colors group">
                 <div className="text-secondary mb-4 group-hover:scale-110 transition-transform">{stat.icon}</div>
-                <div className="text-4xl md:text-5xl font-black italic mb-1">{stat.val}<span className="text-sm ml-1 text-quarto/40">{stat.unit}</span></div>
-                <div className="text-xs uppercase tracking-widest text-quarto/60 font-bold">{stat.label}</div>
+                <div className="text-4xl md:text-5xl text-quarto font-black italic mb-1">{stat.val}<span className="text-sm ml-1 text-quarto">{stat.unit}</span></div>
+                <div className="text-xs uppercase tracking-widest text-quarto font-bold">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -154,15 +154,15 @@ console.log(
               <span className="text-primary"> L&apos;ACCADEMIA</span>
               <br /><span className="text-secondary underline decoration-primary">NON È PER TUTTI</span>
             </h2>
-            <p className="text-base md:text-lg text-tertiary font-light mb-8 leading-relaxed text_cont_2">
+            <p className="text-base md:text-lg text-quarto font-light mb-8 leading-relaxed text_cont_2">
               Non siamo una palestra tradizionale. Utilizziamo sensori di movimento e analisi biomeccanica
               per trasformare la tua flessibilità organica in una struttura d&apos;acciaio.
             </p>
-            <ul className="space-y-4 text-tertiary ">
+            <ul className="space-y-4 ">
               {['Analisi Biomeccanica 3D', 'Programmazione Neuro-Motoria', 'Recupero ad alta densità'].map((item, i) => (
                 <li key={i} className="flex items-center space-x-3 group cursor-default">
                   <span className="w-6 h-px bg-secondary group-hover:w-10 transition-all" />
-                  <span className="font-bold uppercase text-xs md:text-sm tracking-widest">{item}</span>
+                  <span className="font-bold uppercase text-xs md:text-sm tracking-widest text-quarto">{item}</span>
                 </li>
               ))}
             </ul>
@@ -243,14 +243,14 @@ console.log(
 
       <section className="py-24 bg-primary relative overflow-hidden">
         {/* Background Decor */}
-        <div className="absolute top-0 right-50 text-[200px] font-black opacity-[0.53] select-none pointer-events-none italic">
+        <div className="absolute top-0 right-50 text-[200px] font-black opacity-[0.53] select-none pointer-events-none italic text-quarto">
           LINEAR
         </div>
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-black uppercase text-tertiary italic">Piani di Evoluzione</h2>
-            <div className="h-1 w-24 bg-secondary mx-auto mt-4" />
+            <h2 className="text-5xl font-black uppercase text-quarto italic">Piani di Evoluzione</h2>
+            <div className="h-1 w-72 bg-secondary mx-auto mt-4" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -264,19 +264,19 @@ console.log(
               >
                 <h3 className="text-xs uppercase tracking-[0.3em] text-quarto mb-2">{plan.name} Membership</h3>
                 <div className="flex items-baseline mb-8">
-                  <span className="text-4xl font-black text-tertiary">€{plan.price}</span>
+                  <span className="text-4xl font-black text-quarto">€{plan.price}</span>
                   <span className="text-quarto/50 text-sm ml-2">/mese</span>
                 </div>
 
                 <ul className="grow space-y-4 mb-10">
                   {plan.features.map((f, j) => (
-                    <li key={j} className="text-tertiary/70 text-sm flex items-center">
+                    <li key={j} className="text-secondary font-semibold text-sm flex items-center">
                       <span className="mr-2 text-secondary">▹</span> {f}
                     </li>
                   ))}
                 </ul>
 
-                <button className={`w-full py-4 font-bold uppercase tracking-widest text-xs transition ${plan.pro ? 'bg-secondary text-white' : 'bg-tertiary text-primary hover:bg-quarto'
+                <button className={`w-full py-4 font-bold uppercase tracking-widest text-xs transition ${plan.pro ? 'bg-secondary text-white hover:bg-quarto hover:text-primary hover:scale-105' : 'bg-quarto text-primary hover:bg-secondary hover:scale-105'
                   }`}>
                   Inizia ora
                 </button>
@@ -310,7 +310,7 @@ console.log(
 
         <div className="relative z-10 text-center px-6">
           <h2 className="text-4xl md:text-7xl font-black uppercase italic tracking-wider ">
-            <div className="-translate-x-12 xxs:-translate-x-24 sm:-translate-x-36 md:-translate-x-44 lg:-translate-x-64 transform text-white/50">
+            <div className="-translate-x-12 xxs:-translate-x-24 sm:-translate-x-36 md:-translate-x-44 lg:-translate-x-64 transform text-quarto/50">
           STEEL
         </div>
         
@@ -318,7 +318,7 @@ console.log(
           WOOD
         </div>
         
-        <div className="translate-x-12 xxs:translate-x-24 sm:translate-x-36 md:translate-x-44 lg:translate-x-64 transform text-white/50">
+        <div className="translate-x-12 xxs:translate-x-24 sm:translate-x-36 md:translate-x-44 lg:translate-x-64 transform text-quarto/50">
           LINEAR
         </div>
           </h2>
