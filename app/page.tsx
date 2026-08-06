@@ -20,7 +20,7 @@ console.log(
 );
 
   return (
-    <main className="bg-gradient-to-b from-primary to-tertiary">
+    <main className="bg-gradient-to-b from-primary to-tertiary sm:pt-16">
       
       <section className="relative h-[90svh] md:min-h-screen flex items-center justify-center overflow-hidden pt-30 md:py-20">
   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-75 md:w-150 h-75 md:h-150 bg-secondary/20 rounded-full blur-[80px] md:blur-[120px] -z-10" />
@@ -39,14 +39,14 @@ console.log(
 </h2>
 
     
-    <p className="mt-7 text-quarto text-base md:text-xl max-w-2xl mx-auto font-light leading-relaxed">
-      L&apos;evoluzione della ginnastica artistica. Dove la disciplina incontra l&apos;innovazione tecnologica.
+    <p className="mt-7 text-quarto text-base md:text-xl max-w-2xl mx-auto font-semibold leading-relaxed italic">
+      Accendi la tua energia. Rompi ogni barriera.
     </p>
 
     {/* Pulsanti */}
     <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
       <button className="w-full sm:w-auto bg-secondary text-primary px-8 py-4 rounded-sm font-black hover:bg-quarto hover:scale-105 transition-all uppercase tracking-widest">
-        Scopri il metodo
+        Scopri i nostri corsi
       </button>
       <button className="w-full sm:w-auto border border-quarto/30 text-quarto px-8 py-4 rounded-sm font-bold hover:bg-quarto hover:text-primary hover:scale-105 transition-all uppercase tracking-widest">
         Guarda i dati
@@ -59,16 +59,16 @@ console.log(
         
         
         <div className="-translate-x-12 xxs:-translate-x-24 sm:-translate-x-36 md:-translate-x-44 lg:-translate-x-64 transform text-quarto  title-mirror-container leading-none">
-          STEEL
+          ASD
         </div>
         
         <div className="translate-x-0 xxs:translate-x-0 transform text-secondary titleP title-mirror-container leading-none">
-          WOOD
+          FREE MIND
         </div>
         
-        <div className="translate-x-12 xxs:translate-x-24 sm:translate-x-36 md:translate-x-44 lg:translate-x-64 transform text-quarto title-mirror-container leading-none">
-          LINEAR
-        </div>
+        {/* <div className="translate-x-12 xxs:translate-x-24 sm:translate-x-36 md:translate-x-44 lg:translate-x-64 transform text-quarto title-mirror-container leading-none">
+          MIND
+        </div> */}
         
       </h1>
     </div>
@@ -97,18 +97,18 @@ console.log(
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     
     {/* Header della sezione: Centrato su mobile/tablet, giustificato su desktop grandi */}
-    <div className="flex flex-col lg:flex-row justify-between items-center lg:items-end mb-12 lg:mb-16 gap-6 text-center lg:text-left">
+    <div className="flex flex-col sm:flex justify-between items-center md:items-start mb-12 md:mb-16 gap-6 text-center md:text-left">
       <div>
         <h2 className="text-secondary font-black italic text-xs sm:text-sm tracking-[0.3em] uppercase mb-3 sm:mb-4 title_section_2">
-          Performance Metrics
+          Work group <sup className="text-quarto">TM</sup>
         </h2>
         <h3 className="text-3xl sm:text-5xl lg:text-6xl text-quarto font-black uppercase italic leading-tight lg:leading-none title_section_2">
-          Monitoraggio <br className="hidden sm:block" /> in tempo reale
+          Certificazioni istruttori <br className="hidden sm:block" /> enti nazionali
         </h3>
       </div>
       
-      <p className="max-w-md text-quarto/60 font-light text-sm sm:text-base lg:text-right title_section_2">
-        Utilizziamo accelerometri e sensori EMG per mappare ogni contrazione muscolare durante l&apos;esecuzione dei grandi attrezzi.
+      <p className="max-w-md text-quarto/60 font-light text-sm sm:text-base lg:text-left title_section_2">
+        Tutti i nostri istruttori sono certificati dai principali enti nazionali per diverse discipline sportive rendendo l&apos;ambiente più sicuro e professionale.
       </p>
     </div>
 
@@ -147,15 +147,15 @@ console.log(
       <section className="max-w-7xl mx-auto px-6 py-24">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           <FeatureCard
-            title="Linear Core"
+            title="Allenamenti adattivi"
             desc="Sviluppo della forza isometrica e stabilità dinamica attraverso il controllo motorio avanzato."
           />
           <FeatureCard
-            title="Wood Flexibility"
+            title="Metodo d'insegnamento"
             desc="Mobilità articolare organica ispirata alla flessibilità del legno, fondamentale per ogni evoluzione."
           />
           <FeatureCard
-            title="Steel Power"
+            title="Operatività Sociale"
             desc="Potenza esplosiva per salti e rotazioni, costruita con protocolli di allenamento tech-driven."
           />
         </div>
@@ -337,15 +337,15 @@ console.log(
         <div className="relative z-10 text-center px-6">
           <h2 className="text-4xl md:text-7xl font-black uppercase italic tracking-wider ">
             <div className="-translate-x-12 xxs:-translate-x-24 sm:-translate-x-36 md:-translate-x-44 lg:-translate-x-64 transform text-quarto/50">
-          STEEL
+          ASD
         </div>
         
         <div className="translate-x-0 xxs:translate-x-0 transform text-secondary/50">
-          WOOD
+          FREE
         </div>
         
         <div className="translate-x-12 xxs:translate-x-24 sm:translate-x-36 md:translate-x-44 lg:translate-x-64 transform text-quarto/50">
-          LINEAR
+          MIND
         </div>
           </h2>
         </div>

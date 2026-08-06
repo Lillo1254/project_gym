@@ -7,7 +7,7 @@ export default function Competizioni() {
       id: 1,
       title: 'Campionato Nazionale Assoluto',
       entity: 'Federazione X',
-      description: 'Competizione nazionale di alto livello che unisce la tradizionale ginnastica artistica alle nuove metriche di valutazione biomeccanica e forza.',
+      description: 'Riconoscimento nazionale ',
       imageUrl: "/images/logo_coni.svg",
       featured: true, // Evidenzia la competizione principale
     },
@@ -20,6 +20,7 @@ export default function Competizioni() {
       featured: false,
     },
   ];
+  // csi csen uisp , sport e salute
 
     return (
         <>

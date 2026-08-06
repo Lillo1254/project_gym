@@ -1,16 +1,17 @@
-import { MapPin, Phone, Mail, Hash} from 'lucide-react';
+import { MapPin, Phone, Mail, Hash } from 'lucide-react';
 import { FaFacebook, FaInstagram } from "react-icons/fa";
+import Image from 'next/image';
 
 export default function Footer() {
   return (
     <footer className="bg-primary border-t border-quarto/20 pt-16 pb-8 text-tertiary">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-          
+
           {/* COLONNA 1: BRAND E CODICE FISCALE */}
           <div className="space-y-6">
             <h2 className="text-2xl font-black tracking-tighter uppercase italic text-quarto">
-              STEEL <span className="text-secondary">WOOD</span> LINEAR
+              ASD <span className="text-secondary">FREE</span> MIND
             </h2>
             <p className="text-white text-sm leading-relaxed">
               L&apos;eccellenza nella ginnastica artistica. Uniamo forza strutturale e precisione lineare per atleti del futuro.
@@ -31,7 +32,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center space-x-3 group">
                 <Mail size={18} className="text-secondary" />
-                <a href="mailto:info@steelwoodlinear.com" className="text-white hover:text-tertiary transition">info@steelwoodlinear.com</a>
+                <a href="mailto:asdfm.artistica@gmail.com" className="text-white hover:text-tertiary transition">asdfm.artistica@gmail.com</a>
               </li>
               <li className="flex items-center space-x-3">
                 <MapPin size={18} className="text-secondary" />
@@ -68,10 +69,36 @@ export default function Footer() {
             </div>
           </div>
         </div>
+        <div className="flex flex-col items-center justify-center sm:flex-row sm:justify-evenly pb-4">
+  <Image 
+    src="/images/logo_coni.svg"
+    alt="Logo CONI"
+    width={100}
+    height={100}
+    className="object-contain scale-125 transition-transform duration-300 py-6 sm:py-0 text-center"
+    priority 
+  />
+  <Image 
+    src="/images/logoFGI.png"
+    alt="Logo FGI"
+    width={80}
+    height={80}
+    className="object-contain scale-125 transition-transform duration-300 py-6 sm:py-0"
+    priority 
+  />
+  <Image 
+    src="/images/sportsalute.jpg"
+    alt="Logo Sport e Salute"
+    width={100}
+    height={100}
+    className="object-contain scale-125 transition-transform duration-300 py-6 sm:py-0"
+    priority 
+  />
+</div>
 
         {/* BOTTOM BAR */}
         <div className="border-t border-quarto/10 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-[10px] uppercase tracking-[0.2em] text-white">
-          <p>© 2026 STEEL WOOD LINEAR. Tutti i diritti riservati.</p>
+          <p>© 2026 ASD FREE MIND. Tutti i diritti riservati.</p>
           <div className="flex space-x-6">
             <a href="#" className="hover:text-tertiary transition">Privacy Policy</a>
             <a href="#" className="hover:text-tertiary transition">Cookie Policy</a>
@@ -79,6 +106,8 @@ export default function Footer() {
           </div>
         </div>
       </div>
+
+
     </footer>
   );
 }
