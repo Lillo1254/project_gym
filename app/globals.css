@@ -39,6 +39,7 @@ body {
   background-size: cover;
   background-position: 70% center;
   background-repeat: no-repeat;
+  
 }
 .cut_photo2{
   height: 100%;
@@ -57,7 +58,7 @@ body {
 
 .cut_photo, .cut_photo2, .cut_photo3 {
   width: 100%;
-  clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%); /* Ridotto il taglio per mobile */
+  clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%); 
   transition: transform 0.3s ease;
 }
 
@@ -67,7 +68,7 @@ body {
   }
 }
 
-.titleP{
+/* .titleP{
   opacity: 1;
   animation: opacityT 3s ease-out 1;
 }
@@ -99,8 +100,71 @@ body {
   100% {
     opacity: 1;
   }
+} */
+
+/*  */
+.title-mirror-container {
+  position: relative;
+  /* Metodo moderno: duplica visivamente il blocco ribaltandolo in basso */
+  -webkit-box-reflect: below -15px linear-gradient(transparent 40%, rgba(0, 0, 0, 0.2));
 }
 
+.titleP {
+  display: inline-block;
+  opacity: 1;
+  /* Glow al neon costante una volta finita l'animazione */
+  text-shadow: 0 0 12px var(--color-secondary, rgba(255, 165, 0, 0.6)),
+               0 0 30px var(--color-secondary, rgba(255, 165, 0, 0.4));
+  animation: neonFlicker 2.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes neonFlicker {
+  0% {
+    opacity: 0;
+    text-shadow: none;
+    transform: scale(0.98);
+  }
+  4% {
+    opacity: 1;
+    text-shadow: 0 0 15px var(--color-secondary), 0 0 35px var(--color-secondary);
+    transform: scale(1);
+  }
+  8% {
+    opacity: 0.2;
+    text-shadow: none;
+  }
+  12% {
+    opacity: 1;
+    text-shadow: 0 0 20px var(--color-secondary), 0 0 40px var(--color-secondary);
+  }
+  16% {
+    opacity: 0.4;
+    text-shadow: 0 0 5px var(--color-secondary);
+  }
+  24% {
+    opacity: 1;
+    text-shadow: 0 0 25px var(--color-secondary), 0 0 50px var(--color-secondary);
+  }
+  32% {
+    opacity: 0.1;
+    text-shadow: none;
+  }
+  48% {
+    opacity: 1;
+    text-shadow: 0 0 20px var(--color-secondary), 0 0 40px var(--color-secondary);
+  }
+  54% {
+    opacity: 0.7;
+    text-shadow: 0 0 10px var(--color-secondary);
+  }
+  100% {
+    opacity: 1;
+    text-shadow: none;
+    transform: scale(1);
+  }
+}
+
+/*  */
 .section_1_observer .photo_1,
 .section_1_observer .photo_2,
 .section_1_observer .photo_3 {

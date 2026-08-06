@@ -45,10 +45,10 @@ export default function Footer() {
             <h3 className="font-bold uppercase tracking-widest text-secondary text-sm">Orari & Social</h3>
             <p className="text-sm text-white">Lun - Ven: 08:00 - 21:30<br />Sab: 09:00 - 18:00</p>
             <div className="flex space-x-4 pt-2">
-              <a href="#" className="p-2 bg-quarto/10 rounded-full hover:bg-secondary transition-colors">
+              <a href="#" className="p-2 bg-quarto rounded-full hover:bg-secondary hover:scale-110 transition-all ">
                 <FaInstagram size={20} />
               </a>
-              <a href="#" className="p-2 bg-quarto/10 rounded-full hover:bg-secondary transition-colors">
+              <a href="#" className="p-2 bg-quarto rounded-full hover:bg-secondary hover:scale-110 transition-all">
                 <FaFacebook size={20} />
               </a>
             </div>

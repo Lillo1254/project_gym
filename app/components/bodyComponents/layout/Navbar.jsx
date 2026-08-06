@@ -56,9 +56,10 @@ export default function Navbar() {
       {/* MOBILE MENU (Slide Down) */}
       <div className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out bg-primary ${isOpen ? 'max-h-96 opacity-100 border-b border-quarto/20' : 'max-h-0 opacity-0'}`}>
         <div className="px-6 py-8 flex flex-col space-y-6 text-center uppercase tracking-[0.2em] text-sm">
-          <Link href="#" onClick={() => setIsOpen(false)} className="hover:text-quarto transition">Programmi</Link>
-          <Link href="#" onClick={() => setIsOpen(false)} className="hover:text-quarto transition">Atleti</Link>
-          <Link href="#" onClick={() => setIsOpen(false)} className="hover:text-quarto transition">Contatti</Link>
+          <Link href="/corsi" className={getLinkClasses("/corsi")} onClick={() => setIsOpen(false)}>Corsi</Link>
+          <Link href="/competizioni" className={getLinkClasses("/competizioni")} onClick={() => setIsOpen(false)}>Competizioni</Link>
+          <Link href="/contact" className={getLinkClasses("/contact")} onClick={() => setIsOpen(false)}>Contatti</Link>
+          <Link href="/chi-siamo" className={getLinkClasses("/chi-siamo")} onClick={() => setIsOpen(false)}>About Us</Link>
           <button className="bg-secondary px-5 py-4 rounded-sm font-bold text-white">
             ISCRIVITI ORA
           </button>

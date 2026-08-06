@@ -28,13 +28,18 @@ console.log(
   <div className="text-center px-6 pt-15 w-full flex flex-col items-center">
     
     
-    <h2 className="text-5xl sm:text-6xl md:text-8xl font-black italic uppercase leading-[0.9] tracking-tighter text-quarto">
+{/*     <h2 className="text-5xl sm:text-6xl md:text-8xl font-black italic uppercase leading-[0.9] tracking-tighter text-quarto">
       <span className="text-secondary titleP">F</span>ORZ<span className="text-secondary titleP">A</span> E <br className="md:hidden" />
       <span className="text-secondary titleP">P</span>REC<span className="text-secondary titleP">IS</span>ION<span className="text-secondary titleP">E</span>
-    </h2>
+    </h2> */}
+
+    <h2 className="text-4xl sm:text-6xl md:text-8xl font-black italic uppercase leading-[0.9] tracking-tighter text-quarto title-mirror-container ">
+  <span className="text-secondary titleP ">F</span>ORZ<span className="text-secondary titleP">A</span> <br className='md:hidden'/> E <br className="md:hidden" />
+  <span className="text-secondary titleP">P</span>REC<span className="text-secondary titleP">IS</span>ION<span className="text-secondary titleP">E</span>
+</h2>
 
     
-    <p className="mt-6 text-quarto text-base md:text-xl max-w-2xl mx-auto font-light leading-relaxed">
+    <p className="mt-7 text-quarto text-base md:text-xl max-w-2xl mx-auto font-light leading-relaxed">
       L&apos;evoluzione della ginnastica artistica. Dove la disciplina incontra l&apos;innovazione tecnologica.
     </p>
 
@@ -50,18 +55,18 @@ console.log(
 
     
     <div className="text-center w-full pt-12 flex flex-col items-center gap-2">
-      <h1 className="text-4xl sm:text-6xl md:text-8xl font-black italic uppercase leading-none tracking-tighter">
+      <h1 className="text-4xl sm:text-6xl md:text-8xl font-black italic uppercase leading-none tracking-tighter ">
         
         
-        <div className="-translate-x-12 xxs:-translate-x-24 sm:-translate-x-36 md:-translate-x-44 lg:-translate-x-64 transform text-quarto">
+        <div className="-translate-x-12 xxs:-translate-x-24 sm:-translate-x-36 md:-translate-x-44 lg:-translate-x-64 transform text-quarto  title-mirror-container leading-none">
           STEEL
         </div>
         
-        <div className="translate-x-0 xxs:translate-x-0 transform text-secondary titleP">
+        <div className="translate-x-0 xxs:translate-x-0 transform text-secondary titleP title-mirror-container leading-none">
           WOOD
         </div>
         
-        <div className="translate-x-12 xxs:translate-x-24 sm:translate-x-36 md:translate-x-44 lg:translate-x-64 transform text-quarto">
+        <div className="translate-x-12 xxs:translate-x-24 sm:translate-x-36 md:translate-x-44 lg:translate-x-64 transform text-quarto title-mirror-container leading-none">
           LINEAR
         </div>
         
@@ -72,7 +77,7 @@ console.log(
 </section>
 
       {/* Grid Immagini - Corretta Responsività */}
-      <section className="min-h-50 flex flex-col md:flex-row gap-6 py-12 px-6 justify-center items-center overflow-hidden section_1_observer">
+      <section className="min-h-50 flex flex-col md:flex-row gap-6 py-12 px-6 justify-center items-center overflow-hidden section_1_observer ">
         {/* Photo 1 */}
         <div className="shadow_container w-full md:w-1/3 max-w-100 photo_1">
           <div className="cut_photo h-75 md:h-125"></div>
@@ -88,34 +93,55 @@ console.log(
       </section>
 
       {/* Nuova Sezione: DATA TRACKING (Rilevante per il tema Tech) */}
-      <section className="py-24 bg-primary border-y border-quarto/10 section_2_observer">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-            <div>
-              <h2 className="text-secondary font-black italic text-sm tracking-[0.3em] uppercase mb-4 title_section_2">Performance Metrics</h2>
-              <h3 className="text-4xl md:text-6xl text-quarto font-black uppercase italic leading-none title_section_2">Monitoraggio <br /> in tempo reale</h3>
-            </div>
-            <p className="max-w-md text-quarto/60 font-light text-right title_section_2">
-              Utilizziamo accelerometri e sensori EMG per mappare ogni contrazione muscolare durante l&apos;esecuzione dei grandi attrezzi.
-            </p>
-          </div>
+      <section className="py-16 md:py-24 bg-primary border-y border-quarto/10 section_2_observer">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    {/* Header della sezione: Centrato su mobile/tablet, giustificato su desktop grandi */}
+    <div className="flex flex-col lg:flex-row justify-between items-center lg:items-end mb-12 lg:mb-16 gap-6 text-center lg:text-left">
+      <div>
+        <h2 className="text-secondary font-black italic text-xs sm:text-sm tracking-[0.3em] uppercase mb-3 sm:mb-4 title_section_2">
+          Performance Metrics
+        </h2>
+        <h3 className="text-3xl sm:text-5xl lg:text-6xl text-quarto font-black uppercase italic leading-tight lg:leading-none title_section_2">
+          Monitoraggio <br className="hidden sm:block" /> in tempo reale
+        </h3>
+      </div>
+      
+      <p className="max-w-md text-quarto/60 font-light text-sm sm:text-base lg:text-right title_section_2">
+        Utilizziamo accelerometri e sensori EMG per mappare ogni contrazione muscolare durante l&apos;esecuzione dei grandi attrezzi.
+      </p>
+    </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 square_section_2">
-            {[
-              { label: 'Forza G', val: '4.2', unit: 'max', icon: <Zap /> },
-              { label: 'Precisione', val: '99.8', unit: '%', icon: <Target /> },
-              { label: 'Battito', val: '185', unit: 'bpm', icon: <Activity /> },
-              { label: 'Atleti', val: '120', unit: '+', icon: <ArrowRight /> },
-            ].map((stat, i) => (
-              <div key={i} className="p-8 border border-quarto hover:border-secondary transition-colors group">
-                <div className="text-secondary mb-4 group-hover:scale-110 transition-transform">{stat.icon}</div>
-                <div className="text-4xl md:text-5xl text-quarto font-black italic mb-1">{stat.val}<span className="text-sm ml-1 text-quarto">{stat.unit}</span></div>
-                <div className="text-xs uppercase tracking-widest text-quarto font-bold">{stat.label}</div>
-              </div>
-            ))}
+    {/* Griglia delle metriche: 1 colonna su mobile, 2 su tablet, 4 su desktop */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 square_section_2">
+      {[
+        { label: 'Forza G', val: '4.2', unit: 'max', icon: <Zap /> },
+        { label: 'Precisione', val: '99.8', unit: '%', icon: <Target /> },
+        { label: 'Battito', val: '185', unit: 'bpm', icon: <Activity /> },
+        { label: 'Atleti', val: '120', unit: '+', icon: <ArrowRight /> },
+      ].map((stat, i) => (
+        <div 
+          key={i} 
+          className="flex flex-col items-center justify-center p-6 sm:p-8 border border-quarto hover:border-secondary group text-center rounded-sm shadow-[0_0_10px_0px_var(--color-secondary)] hover:shadow-[0px_10px_10px_5px_var(--color-tertiary)] hover:scale-110 hover:-translate-y-3 transition-all group"
+        >
+          <div className="text-secondary mb-4 group-hover:scale-110 transition-transform">
+            {stat.icon}
+          </div>
+          <div className="text-4xl sm:text-5xl text-quarto font-black italic mb-1 flex items-baseline justify-center">
+            {stat.val}
+            <span className="text-xs sm:text-sm ml-1 text-quarto/80 font-normal">
+              {stat.unit}
+            </span>
+          </div>
+          <div className="text-xs uppercase tracking-widest text-quarto font-bold">
+            {stat.label}
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+
+  </div>
+</section>
 
       {/* Features - Ottimizzate per Mobile */}
       <section className="max-w-7xl mx-auto px-6 py-24">
@@ -136,7 +162,7 @@ console.log(
       </section>
 
       {/* Section Accademia - Corretta Responsività Immagini */}
-      <section className="py-24 bg-section_accademy text-primary min-h-[80vh]">
+      <section className="py-24 bg-section_accademy text-quarto min-h-[80vh]">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="relative order-2 lg:order-1">
             <div className="absolute -top-4 -left-4 w-full h-full border-2 border-secondary/30 -z-10" />
@@ -152,7 +178,7 @@ console.log(
           <div className="order-1 lg:order-2">
             <h2 className="text-4xl md:text-5xl font-black uppercase italic leading-none mb-6 text_cont">
               <span className="text-primary"> L&apos;ACCADEMIA</span>
-              <br /><span className="text-secondary underline decoration-primary">NON È PER TUTTI</span>
+              <br /><span className="text-secondary underline decoration-primary">È PER TUTTI</span>
             </h2>
             <p className="text-base md:text-lg text-quarto font-light mb-8 leading-relaxed text_cont_2">
               Non siamo una palestra tradizionale. Utilizziamo sensori di movimento e analisi biomeccanica
@@ -174,10 +200,10 @@ console.log(
       <section className="py-24 bg-primary overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row items-baseline gap-4 mb-12">
-            <h2 className="text-5xl md:text-7xl font-black uppercase italic leading-none">
+            <h2 className="text-5xl md:text-7xl font-black uppercase italic leading-none text-quarto">
               Arena <span className="text-secondary">Dati</span>
             </h2>
-            <span className="text-quarto/40 uppercase tracking-[0.3em] font-bold text-sm">
+            <span className="text-quarto/200 uppercase tracking-[0.3em] font-bold text-sm">
               Archive 2024-2026
             </span>
           </div>
@@ -287,7 +313,7 @@ console.log(
       </section>
 
       {/* last section video */}
-      <section className="relative w-full h-[60vh] md:h-[85vh] bg-primary overflow-hidden flex items-center justify-center">
+      <section className="relative w-full h-[60vh] md:h-[85vh] bg-primary overflow-hidden flex items-center justify-center shadow-[0_0px_30px_rgba(0,0,0,0.9)]">
         <div className="absolute inset-0 w-full h-full">
           <video
             className="w-full h-full object-cover"
