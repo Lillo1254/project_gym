@@ -9,13 +9,25 @@
   --breakpoint-xxs: 347px;
 } */
 
-@theme {
-  --color-primary: #1E3A8A ;
-  --color-secondary: #f28c28 ;
-  --color-tertiary: #1F2937 ;
-  --color-quarto: #F9FAFB ;
-  --color-error: #961B4D ;
+/* @theme {
+  --color-primary: #1E3A8A;
+  --color-secondary: #f28c28;
+  --color-tertiary: #1F2937;
+  --color-quarto: #F9FAFB;
+  --color-error: #961B4D;
+
   --breakpoint-xxs: 347px;
+  --breakpoint-xxxl: 1560px;
+} */
+@theme {
+  --color-primary: #101E3E;
+  --color-secondary: #f28c28;
+  --color-tertiary: #1F2937;
+  --color-quarto: #F9FAFB;
+  --color-error: #961B4D;
+
+  --breakpoint-xxs: 347px;
+  --breakpoint-xxxl: 1560px;
 }
 /* @theme {
   --color-primary: #0d369a;
@@ -302,4 +314,52 @@ body {
     background: linear-gradient(rgba(0, 0, 0, 0.4)), url("../public/images/istruttori.webp");
   background-size: cover;
   background-position: center;
+}
+
+/* media query testo hero */
+.textHero {
+  font-size: 2rem; /* Valore base opzionale per schermi sotto i 640px */
+  
+}
+
+/* 640px -> 2.25rem */
+@media (min-width: 640px) {
+  .textHero {
+    font-size: 2.25rem;
+  }
+}
+
+/* 768px -> 3rem */
+@media (min-width: 768px) {
+  .textHero {
+    font-size: 3rem;
+  }
+}
+
+/* 1024px -> 3.75rem */
+@media (min-width: 1024px) {
+  .textHero {
+    font-size: 3.75rem;
+  }
+}
+
+/* 1350px -> 3.95rem */
+@media (min-width: 1350px) {
+  .textHero {
+    font-size: 3.95rem;
+  }
+}
+
+/* 1450px -> 4rem */
+@media (min-width: 1450px) {
+  .textHero {
+    font-size: 4rem;
+  }
+}
+
+/* 1560px -> 4.5rem */
+@media (min-width: 1560px) {
+  .textHero {
+    font-size: 4.5rem;
+  }
 }

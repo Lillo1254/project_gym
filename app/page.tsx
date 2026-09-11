@@ -20,59 +20,62 @@ console.log(
 );
 
   return (
-    <main className="bg-gradient-to-b from-primary to-tertiary sm:pt-16">
+    <main className=" sm:pt-16">
       
-      <section className="relative h-[90svh] md:min-h-screen flex items-center justify-center overflow-hidden pt-30 md:py-20">
-  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-75 md:w-150 h-75 md:h-150 bg-secondary/20 rounded-full blur-[80px] md:blur-[120px] -z-10" />
+      <section className="relative min-h-[90svh] md:min-h-screen grid grid-cols-1 md:grid-cols-2 items-center justify-center overflow-hidden py-30 md:py-20">
+  {/* Sfondo Glow */}
+  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-75 md:w-150 h-75 md:h-150 bg-secondary/20 rounded-full blur-[80px] md:blur-[120px] -z-10 pointer-events-none" />
 
-  <div className="text-center px-6 pt-15 w-full flex flex-col items-center">
+  {/* Colonna Testo (Ordine 2 su mobile, 1 su desktop) */}
+  <div className="w-full flex flex-col items-center text-center px-4 sm:px-6 md:px-8 z-10">
     
-    
-{/*     <h2 className="text-5xl sm:text-6xl md:text-8xl font-black italic uppercase leading-[0.9] tracking-tighter text-quarto">
-      <span className="text-secondary titleP">F</span>ORZ<span className="text-secondary titleP">A</span> E <br className="md:hidden" />
+    {/* Titolo Principale */}
+    <h2 className="text-3xl textHero font-black italic uppercase leading-[0.95] tracking-tighter text-quarto title-mirror-container">
+      <span className="text-secondary titleP">F</span>ORZ<span className="text-secondary titleP">A</span>{" "}
+      <br className="" /> E <br className="" />
       <span className="text-secondary titleP">P</span>REC<span className="text-secondary titleP">IS</span>ION<span className="text-secondary titleP">E</span>
-    </h2> */}
+    </h2>
 
-    <h2 className="text-4xl sm:text-6xl md:text-8xl font-black italic uppercase leading-[0.9] tracking-tighter text-quarto title-mirror-container ">
-  <span className="text-secondary titleP ">F</span>ORZ<span className="text-secondary titleP">A</span> <br className='md:hidden'/> E <br className="md:hidden" />
-  <span className="text-secondary titleP">P</span>REC<span className="text-secondary titleP">IS</span>ION<span className="text-secondary titleP">E</span>
-</h2>
-
-    
-    <p className="mt-7 text-quarto text-base md:text-xl max-w-2xl mx-auto font-semibold leading-relaxed italic">
+    {/* Sottotitolo */}
+    <p className="mt-5 md:mt-7 text-quarto text-base md:text-xl max-w-xl mx-auto font-semibold leading-relaxed italic">
       Accendi la tua energia. Rompi ogni barriera.
     </p>
 
     {/* Pulsanti */}
-    <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
-      <button className="w-full sm:w-auto bg-secondary text-primary px-8 py-4 rounded-sm font-black hover:bg-quarto hover:scale-105 transition-all uppercase tracking-widest">
+    <div className="mt-8 md:mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center w-full max-w-md sm:max-w-none">
+      <button className="w-full sm:w-auto bg-secondary text-primary px-8 py-4 rounded-sm font-black hover:bg-quarto hover:scale-105 transition-all uppercase tracking-widest cursor-pointer">
         Scopri i nostri corsi
       </button>
-      <button className="w-full sm:w-auto border border-quarto/30 text-quarto px-8 py-4 rounded-sm font-bold hover:bg-quarto hover:text-primary hover:scale-105 transition-all uppercase tracking-widest">
+      <button className="w-full sm:w-auto border border-quarto/30 text-quarto px-8 py-4 rounded-sm font-bold hover:bg-quarto hover:text-primary hover:scale-105 transition-all uppercase tracking-widest cursor-pointer">
         Guarda i dati
       </button>
     </div>
 
-    
-    <div className="text-center w-full pt-12 flex flex-col items-center gap-2">
-      <h1 className="text-4xl sm:text-6xl md:text-8xl font-black italic uppercase leading-none tracking-tighter ">
-        
-        
-        <div className="-translate-x-12 xxs:-translate-x-24 sm:-translate-x-36 md:-translate-x-44 lg:-translate-x-64 transform text-quarto  title-mirror-container leading-none">
+    {/* Brand / Name Section */}
+    <div className="text-center w-full pt-8 md:pt-12 flex flex-col items-center">
+      <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black italic uppercase leading-none tracking-tighter w-full">
+        <div className="-translate-x-8 sm:-translate-x-16 md:-translate-x-24 transform text-quarto title-mirror-container leading-none">
           ASD
         </div>
-        
-        <div className="translate-x-0 xxs:translate-x-0 transform text-secondary titleP title-mirror-container leading-none">
+        <div className="translate-x-4 sm:translate-x-8 md:translate-x-12 transform text-secondary titleP title-mirror-container leading-none">
           FREE MIND
         </div>
-        
-        {/* <div className="translate-x-12 xxs:translate-x-24 sm:translate-x-36 md:translate-x-44 lg:translate-x-64 transform text-quarto title-mirror-container leading-none">
-          MIND
-        </div> */}
-        
       </h1>
     </div>
-    
+  </div>
+
+  {/* Colonna Immagine (Ordine 1 su mobile, 2 su desktop) */}
+  <div className="w-full h-full min-h-87.5 md:min-h-full relative flex items-center justify-center overflow-hidden ">
+    <div className="group relative w-[80%] h-[80%] overflow-hidden rounded-4xl">
+    <Image
+      src="/images/istruttori.webp"
+      alt="Hero Image"
+      priority
+      fill
+      sizes="(max-width: 768px) 100vw, 100vw"
+      className="object-cover object-center rounded-4xl shadow-[0_0_30px_rgba(0,0,0,0.5)] transition-transform duration-700 ease-out group-hover:scale-110"
+    />
+    </div>
   </div>
 </section>
 
@@ -322,13 +325,12 @@ console.log(
             muted
             playsInline
           >
-            {/* Se hai due video diversi (uno orizzontale e uno verticale) puoi gestirli così: */}
+            
             <source src="/videos/vediovert.mp4" media="(max-width: 450px)" />
             <source src="/videos/videoLast50.mp4" media="(min-width: 769px)" />
 
-            {/* Video di fallback se usi un solo video centrale */}
-            {/* <source src="/video/steel-wood-video.mp4" type="video/mp4" />
-            Il tuo browser non supporta il tag video. */}
+            
+            
           </video>
 
 

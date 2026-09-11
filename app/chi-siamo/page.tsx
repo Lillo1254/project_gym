@@ -1,4 +1,5 @@
 import { Phone, Mail, Clock } from 'lucide-react';
+import Address from "@/app/components/bodyComponents/layout/Address";
 
 export default function ChiSiamo() {
   return (
@@ -93,17 +94,17 @@ export default function ChiSiamo() {
             <div className="bg-primary p-8 text-tertiary rounded-sm flex flex-col items-center text-center">
               <Phone className="text-secondary mb-4" size={32} />
               <h4 className="font-bold uppercase text-xs tracking-widest mb-2">Chiamaci</h4>
-              <p className="text-quarto">+39 012 345 678</p>
+              <p className="text-quarto">{Address.numero}</p>
             </div>
             <div className="bg-primary p-8 text-tertiary rounded-sm flex flex-col items-center text-center">
               <Mail className="text-secondary mb-4" size={32} />
               <h4 className="font-bold uppercase text-xs tracking-widest mb-2">Email</h4>
-              <p className="text-quarto">info@steelwoodlinear.com</p>
+              <p className="text-quarto">{Address.email}</p>
             </div>
             <div className="bg-primary p-8 text-tertiary rounded-sm flex flex-col items-center text-center">
               <Clock className="text-secondary mb-4" size={32} />
               <h4 className="font-bold uppercase text-xs tracking-widest mb-2">Visita</h4>
-              <p className="text-quarto">Via dell&apos;Evoluzione 42, Milano</p>
+              <p className="text-quarto">{Address.indirizzo}, {Address.citta} {Address.cap}</p>
             </div>
           </div>
         </div>
