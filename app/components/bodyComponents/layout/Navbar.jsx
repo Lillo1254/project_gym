@@ -32,7 +32,7 @@ export default function Navbar() {
     alt="Logo ASD Free Mind" 
     fill 
     sizes="(max-width: 640px) 96px, 128px"
-    className="object-contain scale-125 transition-transform duration-300"
+    className="object-contain scale-125 transition-transform duration-300 brightness-0 invert"
     priority
   />
 </div>

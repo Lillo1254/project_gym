@@ -7,9 +7,9 @@ import Link from 'next/link';
 export default function Home() {
 
   const plans = [
-    { name: 'Steel', price: '89', features: ['3 Sessioni/settimana', 'Analisi Video', 'Accesso Lab'] },
-    { name: 'Linear', price: '129', features: ['Sessioni Illimitate', 'Biomeccanica Pro', 'Coach Personale'], pro: true },
-    { name: 'Wood', price: '59', features: ['2 Sessioni/settimana', 'Mobilità Base', 'Accesso App'] }
+    { name: 'Basic', price: '89', features: ['3 Sessioni/settimana', 'Analisi Video', 'Accesso Lab'] },
+    { name: 'Pre-competitive', price: '129', features: ['Sessioni Illimitate', 'Biomeccanica Pro', 'Coach Personale'], pro: true },
+    { name: 'Advanced', price: '59', features: ['2 Sessioni/settimana', 'Mobilità Base', 'Accesso App'] }
   ];
 
 console.log(
@@ -69,7 +69,7 @@ console.log(
     <div className="group relative w-[80%] h-[80%] overflow-hidden rounded-4xl">
     <Image
       src="/images/istruttori.webp"
-      alt="Hero Image"
+      alt="Hero Image in the gym with instructors and athletes"
       priority
       fill
       sizes="(max-width: 768px) 100vw, 100vw"
@@ -206,7 +206,7 @@ console.log(
             <h2 className="text-5xl md:text-7xl font-black uppercase italic leading-none text-quarto">
               Arena <span className="text-secondary">Dati</span>
             </h2>
-            <span className="text-quarto/200 uppercase tracking-[0.3em] font-bold text-sm">
+            <span className="text-quarto/50 uppercase tracking-[0.3em] font-bold text-sm">
               Archive 2024-2026
             </span>
           </div>
@@ -215,14 +215,14 @@ console.log(
           <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-auto md:h-200">
 
             {/* Immagine Grande - Main Event */}
-            <div className="md:col-span-2 md:row-span-2 relative group overflow-hidden bg-quarto/10 border border-quarto/20">
-              <div className="absolute inset-0 bg-secondary/20 group-hover:bg-transparent transition-colors duration-500 z-10" />
+            <div className="md:col-span-2 md:row-span-2 relative group overflow-hidden bg-quarto/10 border border-quarto/20 rounded-3xl">
+              <div className="absolute inset-0 bg-secondary/20 group-hover:bg-transparent transition-colors duration-500 z-10 " />
               <Image
                 src="https://www.riminitoday.it/~media/horizontal-hi/65385576371270/europei-ginnastica-artistica-rimini-2024-2.jpeg"
-                alt="World Championship"
+                alt="images generic for competitions gymnastics"
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 "
               />
               <div className="absolute bottom-0 left-0 p-8 z-20 translate-y-full group-hover:translate-y-0 transition-transform duration-500 bg-linear-to-t from-primary to-transparent w-full">
                 <p className="text-secondary font-black italic text-xl">WORLD CHAMPIONSHIPS</p>
@@ -231,10 +231,10 @@ console.log(
             </div>
 
             {/* Immagine Orizzontale */}
-            <div className="md:col-span-2 md:row-span-1 relative group overflow-hidden bg-quarto/10 border border-quarto/20 h-75 md:h-auto">
+            <div className="md:col-span-2 md:row-span-1 relative group overflow-hidden bg-quarto/10 border border-quarto/20 h-75 md:h-auto rounded-3xl">
               <Image
                 src="https://imgresizer.eurosport.com/unsafe/1200x0/filters:format(jpeg)/origin-imgresizer.eurosport.com/2021/05/23/3138070-64317128-2560-1440.jpg"
-                alt="National League"
+                alt="images generic for competitions gymnastics"
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
@@ -245,10 +245,10 @@ console.log(
             </div>
 
             {/* Immagine Verticale 1 */}
-            <div className="md:col-span-1 md:row-span-1 relative group overflow-hidden bg-quarto/10 border border-quarto/20 h-75 md:h-auto">
+            <div className="md:col-span-1 md:row-span-1 relative group overflow-hidden bg-quarto/10 border border-quarto/20 h-75 md:h-auto rounded-3xl">
               <Image
                 src="https://www.aicsfirenze.net/wp-content/uploads/2021/03/158100066_274792684058055_7680837354109959849_n.jpg"
-                alt="Tech Analysis"
+                alt="images generic for competitions gymnastics"
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
@@ -256,11 +256,17 @@ console.log(
             </div>
 
             {/* Immagine Verticale 2 - Con CTA interna */}
-            <div className="md:col-span-1 md:row-span-1 relative group overflow-hidden border border-secondary bg-secondary/10 flex items-center justify-center p-6 text-center h-75 md:h-auto">
-              <div>
-                
+            <div className="md:col-span-1 md:row-span-1 relative group overflow-hidden border border-secondary bg-secondary/10 flex items-center justify-center p-6 text-center h-75 md:h-auto rounded-3xl">
+            <Image
+                src="/images/trofeo.webp"
+                alt="Call to action for view competitions"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                className="object-contain bg-white grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 relative"
+              />
+              <div className="absolute inset-0 bg-primary/40 flex flex-col items-center justify-center p-6 z-20 ">
                 <p className="text-quarto text-xs font-light uppercase tracking-tighter mb-4">Guarda le nostre <br />competizioni</p>
-                <Link href="/competizioni" className="text-[10px] border border-secondary px-4 py-2 hover:bg-secondary hover:text-primary transition-all font-bold">
+                <Link href="/competizioni" className="text-[1rem] text-quarto border border-secondary px-4 py-2 hover:bg-secondary hover:text-primary transition-all font-bold">
                   LE NOSTRE GARE
                 </Link>
               </div>
@@ -272,8 +278,8 @@ console.log(
 
       <section className="py-24 bg-primary relative overflow-hidden">
         {/* Background Decor */}
-        <div className="absolute top-0 right-50 text-[200px] font-black opacity-[0.53] select-none pointer-events-none italic text-quarto">
-          LINEAR
+        <div className="absolute top-40 sm:top-30 md:top-25 lg:top-0 right-20 sm:right-48 md:right-70 lg:right-50 text-[70px] md:text-[90px] lg:text-[150px] font-black opacity-[0.33] select-none pointer-events-none italic text-secondary">
+          MIND
         </div>
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">

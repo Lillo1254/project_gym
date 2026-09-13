@@ -60,14 +60,18 @@ body {
   background-size: cover;
   background-position: 70% center;
   background-repeat: no-repeat;
+  transform: skewX(10deg);
+  transform-origin: center;
   
 }
 .cut_photo2{
   height: 100%;
-  background: url(/images/ballstrisc.svg);
+  background: url(/images/gio_copertina.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  transform: skewX(10deg);
+  transform-origin: center;
 }
 .cut_photo3{
   height: 100%;
@@ -75,17 +79,21 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  transform: skewX(10deg);
+  transform-origin: center;
 }
 
 .cut_photo, .cut_photo2, .cut_photo3 {
   width: 100%;
-  clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%); 
+  border-radius: 20px;
+  transform: skewX(-10deg);
+  overflow: hidden; 
   transition: transform 0.3s ease;
 }
 
 @media (max-width: 768px) {
   .cut_photo, .cut_photo2, .cut_photo3 {
-    clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%); /* Ancora meno taglio su mobile */
+    clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
   }
 }
 
