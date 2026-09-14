@@ -60,8 +60,6 @@ body {
   background-size: cover;
   background-position: 70% center;
   background-repeat: no-repeat;
-  transform: skewX(10deg);
-  transform-origin: center;
   
 }
 .cut_photo2{
@@ -70,8 +68,6 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  transform: skewX(10deg);
-  transform-origin: center;
 }
 .cut_photo3{
   height: 100%;
@@ -79,8 +75,6 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  transform: skewX(10deg);
-  transform-origin: center;
 }
 
 .cut_photo, .cut_photo2, .cut_photo3 {
@@ -96,40 +90,6 @@ body {
     clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
   }
 }
-
-/* .titleP{
-  opacity: 1;
-  animation: opacityT 3s ease-out 1;
-}
-@keyframes opacityT {
-  0% {
-    opacity: 1;
-  }
-  5% {
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  15% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 1;
-  }
-  30% {
-    opacity: 0;
-  }
-  45% {
-    opacity: 1;
-  }
-  60% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-} */
 
 /*  */
 .title-mirror-container {
@@ -290,12 +250,24 @@ body {
   }
 }
 
-.bg-section_accademy{
-  background: url("../public/images/attachome.jpg");
+.bg-section_accademy {
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.699), rgba(0, 0, 0, 0.699)), url("../public/images/attachome.jpg");
   background-size: cover;
-  background-position:80% center;
+  background-position: 80% center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.bg-section_accademy::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  z-index: -1;
 }
 .text_cont{
  -webkit-text-stroke: 0.5px white;
@@ -309,17 +281,17 @@ body {
 }
 
 .bg_centri{
-  background: linear-gradient(rgba(0, 0, 0, 0.4)), url("../public/images/centri.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.699)), url("../public/images/centri.png");
   background-size: cover;
   background-position: center;
 }
 .bg_campi{
-    background: linear-gradient(rgba(0, 0, 0, 0.4)), url("../public/images/allenamentogroup.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.699)), url("../public/images/allenamentogroup.jpg");
   background-size: cover;
   background-position: center;
 }
 .bg_istruttori{
-    background: linear-gradient(rgba(0, 0, 0, 0.4)), url("../public/images/istruttori.webp");
+    background: linear-gradient(rgba(0, 0, 0, 0.699)), url("../public/images/istruttori.webp");
   background-size: cover;
   background-position: center;
 }

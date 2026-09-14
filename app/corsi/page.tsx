@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { X, Target, Zap } from 'lucide-react';
-
+import Link from 'next/link';
 const CORSI = [
   {
     "id": 1,
@@ -230,9 +230,9 @@ export default function Corsi() {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                  <button className="w-full sm:flex-1 bg-secondary text-white py-3.5 sm:py-4 font-black uppercase tracking-widest text-xs hover:bg-secondary/80 transition rounded-md">
+                  <Link href="/contact" className="w-full sm:flex-1 bg-secondary text-white py-3.5 sm:py-4 font-black uppercase tracking-widest text-xs hover:bg-secondary/80 transition rounded-md text-center">
                     Prenota Posto
-                  </button>
+                  </Link>
                   <button
                     onClick={() => setSelectedCorso(null)}
                     className="w-full sm:flex-1 border border-quarto/20 text-quarto py-3.5 sm:py-4 font-black uppercase tracking-widest text-xs hover:bg-quarto/90 hover:text-primary transition rounded-md "
@@ -248,11 +248,11 @@ export default function Corsi() {
         {/* BANNER CTA */}
         <section className="mt-16 sm:mt-24 md:mt-32 p-6 sm:p-8 md:p-12 bg-secondary flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-6 md:gap-8 rounded-md shadow-[0_0_2px_0px_var(--color-quarto)] hover:-translate-y-4 hover:shadow-[0_10px_15px_0px_var(--color-quarto)]  transition-all">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-black uppercase italic leading-tight text-primary">
-            Vuoi una consulenza biomeccanica gratuita?
+            Vuoi sapere quale corso è ideale per te?
           </h2>
-          <button className="w-full md:w-auto shrink-0 bg-quarto text-primary px-6 sm:px-10 py-3.5 sm:py-4 font-bold uppercase tracking-widest text-xs sm:text-sm hover:bg-primary hover:text-quarto transition rounded-lg">
+          <Link href="/contact" className="w-full md:w-auto shrink-0 bg-quarto text-primary px-6 sm:px-10 py-3.5 sm:py-4 font-bold uppercase tracking-widest text-xs sm:text-sm hover:bg-primary hover:text-quarto transition rounded-lg">
             Prenota Ora
-          </button>
+          </Link>
         </section>
 
       </div>

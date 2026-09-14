@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
+import Home from './../../../page';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,6 +45,7 @@ export default function Navbar() {
 
         {/* DESKTOP MENU */}
         <div className="hidden md:flex items-center space-x-6 lg:space-x-8 text-sm uppercase tracking-widest text-quarto">
+          <Link href="/" className={getLinkClasses("/")}>Home</Link>
           <Link href="/corsi" className={getLinkClasses("/corsi")}>Corsi</Link>
           <Link href="/competizioni" className={getLinkClasses("/competizioni")}>Competizioni</Link>
           <Link href="/contact" className={getLinkClasses("/contact")}>Contatti</Link>
@@ -70,8 +72,9 @@ export default function Navbar() {
       </div>
 
       {/* MOBILE MENU */}
-      <div className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out bg-primary/95 backdrop-blur-lg ${isOpen ? 'max-h-96 opacity-100 border-b border-quarto/20' : 'max-h-0 opacity-0'}`}>
+      <div className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out bg-primary/10 backdrop-blur-lg ${isOpen ? 'max-h-96 opacity-100 border-b border-quarto/20' : 'max-h-0 opacity-0'}`}>
         <div className="px-6 py-6 flex flex-col space-y-4 text-center uppercase tracking-[0.2em] text-sm">
+          <Link href="/" className={getLinkClasses("/")}>Home</Link>
           <Link href="/corsi" className={getLinkClasses("/corsi")} onClick={() => setIsOpen(false)}>Corsi</Link>
           <Link href="/competizioni" className={getLinkClasses("/competizioni")} onClick={() => setIsOpen(false)}>Competizioni</Link>
           <Link href="/contact" className={getLinkClasses("/contact")} onClick={() => setIsOpen(false)}>Contatti</Link>

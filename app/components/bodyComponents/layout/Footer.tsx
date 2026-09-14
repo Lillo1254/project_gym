@@ -87,6 +87,7 @@ export default function Footer() {
             alt="Logo CONI"
             width={100}
             height={100}
+            
             className="object-contain scale-125 transition-transform duration-300 py-6 sm:py-0 text-center"
             priority
           />
@@ -103,6 +104,7 @@ export default function Footer() {
             alt="Logo Sport e Salute"
             width={100}
             height={100}
+            
             className="object-contain scale-125 transition-transform duration-300 py-6 sm:py-0"
             priority
           />

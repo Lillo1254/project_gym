@@ -34,7 +34,7 @@ export default function Competizioni() {
             <span className="text-secondary titleP mx-0 px-0">G</span><span className="text-secondary brightness-125 mx-0 px-0">ARE</span>
           </h2>
           <p className="mt-2 text-quarto text-base md:text-xl max-w-2xl mx-auto font-light leading-relaxed">
-            Esplora l&apos;archivio ufficiale e scopri tutte le competizioni organizzate per testare i limiti del corpo umano e della tecnologia.
+            Esplora la nostra offerta formativa e scopri tutti i corsi pensati per ogni età e livello: dallo sviluppo psicomotorio dei più piccoli all&apos;agonismo, dal fitness amatoriale all&apos;inclusione, per allenare il corpo e superare ogni tuo limite.
           </p>
         </div>
       </section>
@@ -54,8 +54,8 @@ export default function Competizioni() {
                 <span className="text-secondary underline decoration-primary">del nostro circuito</span>
               </h3>
             </div>
-            <p className="max-w-md text-quarto/60 font-light text-right text-sm md:text-base">
-              Ogni evento del circuito è progettato per mettere in risalto la potenza dei nostri atleti combinata all&apos;analisi biomeccanica avanzata.
+            <p className="text-quarto text-base md:text-xl max-w-md mx-auto font-light leading-relaxed">
+              Ogni sessione di allenamento unisce la forza e l&apos;energia dei nostri partecipanti a un metodo strutturato, per migliorare costantemente tecnica, coordinazione e benessere.
             </p>
           </div>
         </div>
