@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://asdfreemind.it'; 
+  const baseUrl = 'https://asd-freemind.vercel.app/'; 
 
   return [
     {

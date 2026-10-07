@@ -11,6 +11,6 @@ export default function robots(): MetadataRoute.Robots {
       ],
     },
    
-    sitemap: 'https://asdfreemind.it', 
+    sitemap: 'https://asd-freemind.vercel.app/sitemap.xml', 
   };
 }
