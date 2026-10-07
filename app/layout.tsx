@@ -12,6 +12,10 @@ export const metadata: Metadata = {
   },
   description: "L'evoluzione della ginnastica artistica a Roma attraverso la tecnologia. Uniamo forza strutturale e precisione lineare per atleti del futuro.",
 
+    verification: {
+    google: "H4GXNltP14JU3HCRR-G4OtiqboS9PWirwSUHwGM-unU", 
+  },
+
   alternates: {
     canonical: "https://asd-freemind.vercel.app/",
   },
