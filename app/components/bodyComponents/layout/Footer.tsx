@@ -128,9 +128,9 @@ export default function Footer() {
         <div className="border-t border-quarto/10 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-[10px] uppercase tracking-[0.2em] text-white">
           <p>© 2026 ASD FREE MIND. Tutti i diritti riservati.</p>
           <div className="flex space-x-6">
-            <a href="#" className="hover:text-tertiary transition">Privacy Policy</a>
-            <a href="#" className="hover:text-tertiary transition">Cookie Policy</a>
-            <a href="#" className="hover:text-tertiary transition">Termini e Condizioni</a>
+            <a href="/privacy-policy" className="hover:text-tertiary transition">Privacy Policy</a>
+            <a href="/cookie-policy" className="hover:text-tertiary transition">Cookie Policy</a>
+            
           </div>
         </div>
       </div>
