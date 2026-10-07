@@ -7,9 +7,9 @@ import Link from 'next/link';
 export default function Home() {
 
   const plans = [
-    { name: 'Basic', price: '89', features: ['3 Sessioni/settimana', 'Analisi Video', 'Accesso Lab'] },
-    { name: 'Pre-competitive', price: '129', features: ['Sessioni Illimitate', 'Biomeccanica Pro', 'Coach Personale'], pro: true },
-    { name: 'Advanced', price: '59', features: ['2 Sessioni/settimana', 'Mobilità Base', 'Accesso App'] }
+    { name: 'Basic', features: ['Analisi Video', 'Accesso Lab individuale'] },
+    { name: 'Pre-competitive', features: ['Sessioni Illimitate', 'Training Pro', 'Coach Personale'], pro: true },
+    { name: 'Advanced',  features: [ 'Mobilità Base', 'Modalità avanzata', 'Preparazione Gare'] }
   ];
 
   console.log(
@@ -68,7 +68,7 @@ export default function Home() {
         <div className="w-full h-full min-h-87.5 md:min-h-full relative flex items-center justify-center overflow-hidden ">
           <div className="group relative w-[80%] h-[80%] overflow-hidden rounded-4xl">
             <Image
-              src="/images/istruttori.webp"
+              src="/images/fotohero.webp"
               alt="Hero Image in the gym with instructors and athletes"
               priority
               fill
@@ -304,8 +304,7 @@ export default function Home() {
               >
                 <h3 className="text-xs uppercase tracking-[0.3em] text-quarto mb-2">{plan.name} Membership</h3>
                 <div className="flex items-baseline mb-8">
-                  <span className="text-4xl font-black text-quarto">€{plan.price}</span>
-                  <span className="text-quarto/50 text-sm ml-2">/mese</span>
+
                 </div>
 
                 <ul className="grow space-y-4 mb-10">
@@ -363,6 +362,7 @@ export default function Home() {
           </h2>
         </div>
       </section>
+      
 
 
       {/* function observer */}

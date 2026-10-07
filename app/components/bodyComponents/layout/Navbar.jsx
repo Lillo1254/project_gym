@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
-import Home from './../../../page';
+import Address from '@/app/components/bodyComponents/layout/Address';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +13,7 @@ export default function Navbar() {
   const getLinkClasses = (path) => {
     const isActive = pathname === path;
     const baseClasses = "px-3 py-1.5 rounded-md transition duration-300";
-    
+
     return isActive
       ? `${baseClasses} bg-white text-black font-bold shadow-sm`
       : `${baseClasses} hover:text-secondary text-quarto`;
@@ -22,21 +22,21 @@ export default function Navbar() {
   return (
     <nav className="fixed top-10 left-0 w-full z-50 bg-black/50 backdrop-blur-md border-b border-quarto/20 shadow-[0_0_10px_5px_var(--color-secondary)]">
       <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center relative h-16">
-        
+
         {/* LOGO + TITOLO (con overflow visibile e ingrandito) */}
         <div className="flex items-center gap-3">
           <Link href="/" className="relative flex items-center">
             {/* Il logo è ingrandito e posizionato in modo da uscire dai bordi verticali */}
             <div className="relative w-24 h-24 sm:w-30 sm:h-30 -my-8 sm:-my-10 shrink-0 flex items-center justify-center">
-  <Image 
-    src="/images/logoasd.png" 
-    alt="Logo ASD Free Mind" 
-    fill 
-    sizes="(max-width: 640px) 96px, 128px"
-    className="object-contain scale-125 transition-transform duration-300 brightness-0 invert"
-    priority
-  />
-</div>
+              <Image
+                src="/images/logoasd.png"
+                alt="Logo ASD Free Mind"
+                fill
+                sizes="(max-width: 640px) 96px, 128px"
+                className="object-contain scale-125 transition-transform duration-300 brightness-0 invert"
+                priority
+              />
+            </div>
             <h1 className="text-lg sm:text-xl font-bold tracking-tighter text-quarto uppercase ml-2">
               ASD <span className="text-secondary">FREE</span> MIND
             </h1>
@@ -50,14 +50,13 @@ export default function Navbar() {
           <Link href="/competizioni" className={getLinkClasses("/competizioni")}>Competizioni</Link>
           <Link href="/contact" className={getLinkClasses("/contact")}>Contatti</Link>
           <Link href="/chi-siamo" className={getLinkClasses("/chi-siamo")}>About Us</Link>
-          <button className="bg-secondary px-5 py-2 rounded-full font-bold hover:scale-105 transition duration-300 text-white">
-            ISCRIVITI
-          </button>
+          <a href={`mailto:${Address.email}`} className="bg-secondary px-5 py-2 rounded-full font-bold hover:scale-105 transition duration-300 text-white">ISCRIVITI</a>
+
         </div>
 
         {/* BURGER BUTTON (mobile) */}
         <div className="md:hidden">
-          <button 
+          <button
             onClick={() => setIsOpen(!isOpen)}
             className="text-quarto focus:outline-none p-2"
             aria-label="Toggle Menu"
@@ -79,9 +78,7 @@ export default function Navbar() {
           <Link href="/competizioni" className={getLinkClasses("/competizioni")} onClick={() => setIsOpen(false)}>Competizioni</Link>
           <Link href="/contact" className={getLinkClasses("/contact")} onClick={() => setIsOpen(false)}>Contatti</Link>
           <Link href="/chi-siamo" className={getLinkClasses("/chi-siamo")} onClick={() => setIsOpen(false)}>About Us</Link>
-          <button className="bg-secondary px-5 py-3 rounded-md font-bold text-white w-full mt-2">
-            ISCRIVITI ORA
-          </button>
+          <a href={`mailto:${Address.email}`} className="bg-secondary px-5 py-2 rounded-full font-bold hover:scale-105 transition duration-300 text-white">ISCRIVITI</a>
         </div>
       </div>
     </nav>

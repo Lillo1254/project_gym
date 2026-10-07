@@ -1,5 +1,11 @@
-import { Phone, Mail, Clock } from 'lucide-react';
+import { Phone, Mail, Map } from 'lucide-react';
 import Address from "@/app/components/bodyComponents/layout/Address";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "about us",
+  description: "chi siamo e cosa vogliamo fare",
+};
 
 export default function ChiSiamo() {
   return (
@@ -17,16 +23,16 @@ export default function ChiSiamo() {
           </p>
           <div className="space-y-6">
             <div className="border-l-4 border-secondary pl-6">
-              <h3 className="font-bold uppercase tracking-widest text-quarto">Steel (Acciaio)</h3>
-              <p className="text-quarto/60 text-sm">La forza strutturale necessaria per ogni evoluzione.</p>
+              <h3 className="font-bold uppercase tracking-widest text-quarto">La forza strutturale necessaria per ogni evoluzione.</h3>
+              
             </div>
             <div className="border-l-4 border-quarto pl-6">
-              <h3 className="font-bold uppercase tracking-widest text-quarto">Wood (Legno)</h3>
-              <p className="text-quarto/60 text-sm">La flessibilità organica che permette l&apos;adattamento.</p>
+              <h3 className="font-bold uppercase tracking-widest text-quarto">La flessibilità organica che permette l&apos;adattamento.</h3>
+             
             </div>
             <div className="border-l-4 border-secondary/50 pl-6">
-              <h3 className="font-bold uppercase tracking-widest text-quarto">Linear (Linea)</h3>
-              <p className="text-quarto/60 text-sm">La precisione tecnica che definisce la perfezione.</p>
+              <h3 className="font-bold uppercase tracking-widest text-quarto">La precisione tecnica che definisce la perfezione.</h3>
+           
             </div>
           </div>
         </div>
@@ -91,20 +97,31 @@ export default function ChiSiamo() {
         <div className="max-w-7xl mx-auto px-6 ">
           <h2 className="text-4xl font-black uppercase mb-12 italic text-center text-secondary">Mettiti in Contatto</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            <div className="bg-primary p-8 text-tertiary rounded-sm flex flex-col items-center text-center border border-secondary rounded-sm">
-              <Phone className="text-secondary mb-4" size={32} />
+            <div className="bg-primary p-8 text-tertiary rounded-sm flex flex-col items-center text-center border border-secondary  hover:scale-110 transition-transform duration-500">
+              <a href={`tel:${Address.numero}`} className="text-quarto">
+                <Phone className="text-secondary mb-4" size={32} />
+              </a>
               <h4 className="font-bold uppercase text-xs tracking-widest mb-2 text-quarto">Chiamaci</h4>
-              <p className="text-quarto">{Address.numero}</p>
+              <a href={`tel:${Address.numero}`} className="text-quarto">{Address.numero}</a>
             </div>
-            <div className="bg-primary p-8 text-tertiary rounded-sm flex flex-col items-center text-center border border-secondary rounded-sm">
-              <Mail className="text-secondary mb-4" size={32} />
+            
+            <div className="bg-primary p-8 text-tertiary rounded-sm flex flex-col items-center text-center border border-secondary  hover:scale-110 transition-transform duration-500">
+              <a href={`mailto:${Address.email}`} className="text-quarto">
+                <Mail className="text-secondary mb-4" size={32} />
+              </a>
               <h4 className="font-bold uppercase text-xs tracking-widest mb-2 text-quarto">Email</h4>
-              <p className="text-quarto">{Address.email}</p>
+              <a href={`mailto:${Address.email}`} className="text-quarto">
+                {Address.email}
+              </a>
             </div>
-            <div className="bg-primary p-8 text-tertiary rounded-sm flex flex-col items-center text-center border border-secondary rounded-sm">
-              <Clock className="text-secondary mb-4" size={32} />
-              <h4 className="font-bold uppercase text-xs tracking-widest mb-2 text-quarto">Visita</h4>
-              <p className="text-quarto">{Address.indirizzo}, {Address.citta} {Address.cap}</p>
+            <div className="bg-primary p-8 text-tertiary rounded-sm flex flex-col items-center text-center border border-secondary  hover:scale-110 transition-transform duration-500">
+              <a href={Address.mapsAddress} target="_blank" rel="noopener noreferrer">
+                <Map className="text-secondary mb-4" size={32} />
+              </a>
+              <h4 className="font-bold uppercase text-xs tracking-widest mb-2 text-quarto">Venite a trovarci</h4>
+              <a href={Address.mapsAddress} target="_blank" rel="noopener noreferrer" className="text-quarto">
+                <p className="text-quarto">{Address.indirizzo}, {Address.citta} {Address.cap}</p>
+              </a>
             </div>
           </div>
         </div>

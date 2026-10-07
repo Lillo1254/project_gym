@@ -1,25 +1,56 @@
 import Image from "next/image";
+import type { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "attività e competizioni",
+  description: "Scopri i nostri programmi di allenamento personalizzati a Roma. Competizioni per tutte le età basate su precisione e forza.",
+};
 export default function Competizioni() {
 
-  const competitions = [
-    {
-      id: 1,
-      title: 'Campionato Nazionale Assoluto',
-      entity: 'Federazione X',
-      description: 'Riconoscimento nazionale ',
-      imageUrl: "/images/logo_coni.svg",
-      featured: true, 
-    },
-    {
-      id: 2,
-      title: 'Winter Cup Tech Challenge',
-      entity: 'Ente Y',
-      description: 'Torneo incentrato sulla precisione e sull’esplosività, con focus sui dati di atterraggio e rotazione.',
-      imageUrl: '/images/logoFGI.png',
-      featured: false,
-    },
-  ];
+const competitions = [
+  {
+    id: 1,
+    title: 'Campionato Nazionale',
+    entity: 'Federazione Ginnastica Italiana',
+    description: 'Riconoscimento nazionale',
+    imageUrl: '/images/logo_coni.svg',
+  },
+  {
+    id: 2,
+    title: 'Torneo FGI',
+    entity: 'Ente Y',
+    description: 'Torneo incentrato sulla precisione e sull’esplosività, con focus sui dati di atterraggio e rotazione.',
+    imageUrl: '/images/logoFGI.png',
+  },
+  {
+    id: 3,
+    title: 'Trofeo Nazionale CSEN',
+    entity: 'CSEN',
+    description: 'Competizione promozionale e agonistica rivolta alle società affiliate CSEN.',
+    imageUrl: '/images/csenlogo.png',
+  },
+  {
+    id: 4,
+    title: 'Campionato Regionale CSI',
+    entity: 'CSI',
+    description: 'Torneo polisportivo incentrato sulla partecipazione e sui valori dello sport integrato.',
+    imageUrl: '/images/csilogo.png',
+  },
+  {
+    id: 5,
+    title: 'Coppa Italia UISP',
+    entity: 'UISP',
+    description: 'Manifestazione nazionale aperta a tutti i livelli di atletica e ginnastica promozionale.',
+    imageUrl: '/images/uisplogo.png',
+  },
+  {
+    id: 6,
+    title: 'Sport & Salute Challenge',
+    entity: 'Sport e Salute',
+    description: 'Iniziativa dedicata alla promozione dei corretti stili di vita e del benessere sportivo.',
+    imageUrl: '/images/sportsalute.png',
+  }
+];
   // csi csen uisp , sport e salute
 
   return (
@@ -61,7 +92,7 @@ export default function Competizioni() {
         </div>
       </section>
 
-      <section className="py-24 bg-primary border-t border-quarto/10">
+ {/*      <section className="py-24 bg-primary border-t border-quarto/10">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row gap-12 items-center bg-primary/40 border border-quarto/20 p-8 md:p-12 hover:border-secondary/50 transition-all duration-500 group">
 
@@ -81,7 +112,7 @@ export default function Competizioni() {
               </div>
             </div>
 
-            {/* Contenitore Testo */}
+    
             <div className="w-full md:w-1/2 flex flex-col justify-between h-full py-4">
               <div>
                 <span className="text-secondary font-black italic text-xs tracking-[0.3em] uppercase mb-2 block">
@@ -102,7 +133,6 @@ export default function Competizioni() {
         </div>
       </section>
 
-      {/* Sezione Seconda Competizione */}
       <section className="py-24 bg-primary border-t border-quarto/10">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row-reverse gap-12 items-center bg-primary/40 border border-quarto/20 p-8 md:p-12 hover:border-secondary/50 transition-all duration-500 group">
@@ -123,7 +153,7 @@ export default function Competizioni() {
               </div>
             </div>
 
-            {/* Contenitore Testo */}
+            
             <div className="w-full md:w-1/2 flex flex-col justify-between h-full py-4">
               <div>
                 <span className="text-secondary font-black italic text-xs tracking-[0.3em] uppercase mb-2 block">
@@ -143,7 +173,53 @@ export default function Competizioni() {
           </div>
 
         </div>
-      </section>
+      </section> */}
+      {competitions.map((item, index) => {
+  const isEven = index % 2 !== 0; // Se l'indice è dispari (1, 3, 5...), è il 2°, 4°, 6° elemento (pari)
+
+  return (
+    <section key={item.id} className="py-24 bg-primary border-t border-quarto/10">
+      <div className="max-w-7xl mx-auto px-6">
+        <div
+          className={`flex flex-col ${
+            isEven ? 'md:flex-row-reverse' : 'md:flex-row'
+          } gap-12 items-center bg-primary/40 border border-quarto/20 p-8 md:p-12 hover:border-secondary/50 transition-all duration-500 group`}
+        >
+          {/* Contenitore Immagine */}
+          <div className="w-full md:w-1/2 h-75 md:h-100 relative flex items-center justify-center p-8 bg-white/5 border border-quarto/10">
+            <div className="w-4/5 h-4/5 relative">
+              <Image
+                src={item.imageUrl}
+                alt={item.title}
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-contain"
+              />
+            </div>
+            <div className="absolute top-4 left-4 bg-primary/80 border border-quarto/20 text-secondary px-3 py-1 font-black italic text-xs tracking-widest uppercase">
+              {item.entity}
+            </div>
+          </div>
+
+          {/* Contenitore Testo */}
+          <div className="w-full md:w-1/2 flex flex-col justify-between h-full py-4">
+            <div>
+              <span className="text-secondary font-black italic text-xs tracking-[0.3em] uppercase mb-2 block">
+                {index === 0 ? 'Evento Principale' : 'Evento Ufficiale'}
+              </span>
+              <h3 className="text-3xl md:text-5xl font-black uppercase italic leading-none mb-6 text-quarto group-hover:text-secondary transition-colors">
+                {item.title}
+              </h3>
+              <p className="text-quarto/70 text-base font-light leading-relaxed mb-8">
+                {item.description}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+})}
     </>
   );
 }

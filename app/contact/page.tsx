@@ -1,5 +1,11 @@
 import { Mail, MessageCircle, Phone, ArrowUpRight } from 'lucide-react';
 import Address from "@/app/components/bodyComponents/layout/Address";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contatti",
+  description: "Scopri i nostri programmi di allenamento personalizzati a Roma. Contattaci subito per avere informazioni",
+};
 
 export default function ContactPage() {
   return (

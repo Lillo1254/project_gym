@@ -51,12 +51,26 @@ export default function Footer() {
             <h3 className="font-bold uppercase tracking-widest text-secondary text-sm">Orari & Social</h3>
             <p className="text-sm text-white">Lun - Ven: 08:00 - 21:30<br />Sab: 09:00 - 18:00</p>
             <div className="flex space-x-4 pt-2">
-              <a href="#" className="p-2 bg-quarto rounded-full hover:bg-secondary hover:scale-110 transition-all ">
+              <a
+                href="https://www.instagram.com/a.s.d.freemind/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Seguici su Instagram"
+                className="p-2 bg-quarto rounded-full hover:bg-secondary hover:scale-110 transition-all"
+              >
                 <FaInstagram size={20} />
               </a>
-              <a href="#" className="p-2 bg-quarto rounded-full hover:bg-secondary hover:scale-110 transition-all">
+
+              <a
+                href="https://www.facebook.com/ASDFREEMIND/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Seguici su Facebook"
+                className="p-2 bg-quarto rounded-full hover:bg-secondary hover:scale-110 transition-all"
+              >
                 <FaFacebook size={20} />
               </a>
+
             </div>
           </div>
 
@@ -64,7 +78,7 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="font-bold uppercase tracking-widest text-secondary text-sm">Posizione</h3>
             <div className="w-full h-40 rounded-sm overflow-hidden grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-500 border border-quarto/20">
-{/*               <iframe
+              {/*               <iframe
                 src="https://www.google.com/maps/place/Via+Licinio+Murena,+36,+00175+Roma+RM,+Italia/@41.8623441,12.5522835,17z/data=!3m1!4b1!4m6!3m5!1s0x132f627513cdcc21:0xb89a71a15f747b42!8m2!3d41.8623401!4d12.5548584!16s%2Fg%2F11q2xl0nb5?hl=it-IT&entry=ttu&g_ep=EgoyMDI2MDkwOC4wIKXMDSoASAFQAw%3D%3D"
                 width="100%"
                 height="100%"
@@ -77,17 +91,17 @@ export default function Footer() {
                 style={{ border: 0 }}
                 /* allowfullscreen="" */
                 loading="lazy"
-                ></iframe>
+              ></iframe>
             </div>
           </div>
         </div>
-        <div className="flex flex-col items-center justify-center sm:flex-row sm:justify-evenly pb-4">
+        <div className="flex flex-col items-center justify-center sm:flex-row sm:justify-evenly pb-4 mb-5">
           <Image
             src="/images/logo_coni.svg"
             alt="Logo CONI"
             width={100}
             height={100}
-            
+
             className="object-contain scale-125 transition-transform duration-300 py-6 sm:py-0 text-center"
             priority
           />
@@ -100,12 +114,12 @@ export default function Footer() {
             priority
           />
           <Image
-            src="/images/sportsalute.jpg"
+            src="/images/sportsalute.png"
             alt="Logo Sport e Salute"
             width={100}
             height={100}
-            
-            className="object-contain scale-125 transition-transform duration-300 py-6 sm:py-0"
+
+            className="object-contain scale-125 transition-transform duration-300 py-6 sm:py-0 bg-amber-50"
             priority
           />
         </div>
