@@ -3,12 +3,6 @@
 import { useState } from 'react';
 import { X, Target, Zap } from 'lucide-react';
 import Link from 'next/link';
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Corsi di Ginnastica Artistica",
-  description: "Scopri i nostri programmi di allenamento personalizzati a Roma. Corsi per tutte le età basati su precisione e forza.",
-};
 
 const CORSI = [
   {
