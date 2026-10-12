@@ -205,6 +205,7 @@ export default function Home() {
                 </li>
               ))}
             </ul>
+        <h2 className="text-2xl md:text-3xl font-black uppercase italic leading-none my-6 testo_in">Crediamo fermamente che la ginnastica sia un valore universale. Offriamo percorsi e corsi di ginnastica adattata per ragazzi e adulti con disabilità o esigenze specifiche, seguiti da tecnici qualificati in ambienti accessibili e sicuri.</h2>
           </div>
         </div>
       </section>

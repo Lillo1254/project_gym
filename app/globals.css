@@ -343,3 +343,12 @@ body {
     font-size: 4.5rem;
   }
 }
+
+.testo_in{
+  background: linear-gradient(135deg, #ff0000, #ffac59, #ffff36, #51ff51, #00c1f1, #4b0082, #b254ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent; /* Fallback per browser non supportati */
+  display: inline-block;
+}

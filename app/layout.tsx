@@ -5,15 +5,15 @@ import Footer from "./components/bodyComponents/layout/Footer";
 import Address from "./components/bodyComponents/layout/Address";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://asd-freemind.vercel.app/"), 
+  metadataBase: new URL("https://asd-freemind.vercel.app/"),
   title: {
-    default: "GIM - Precisione e Forza | ASD FREE MIND Roma", 
+    default: "GYM - Precisione e Forza | ASD FREE MIND Roma",
     template: "%s | ASD FREE MIND",
   },
   description: "L'evoluzione della ginnastica artistica a Roma attraverso la tecnologia. Uniamo forza strutturale e precisione lineare per atleti del futuro.",
 
-    verification: {
-    google: "H4GXNltP14JU3HCRR-G4OtiqboS9PWirwSUHwGM-unU", 
+  verification: {
+    google: "H4GXNltP14JU3HCRR-G4OtiqboS9PWirwSUHwGM-unU",
   },
 
   alternates: {
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "GIM - Precisione e Forza | ASD FREE MIND", 
+    title: "GYM - Precisione e Forza | ASD FREE MIND",
     description: "L'evoluzione della ginnastica artistica attraverso la tecnologia a Roma.",
     url: "https://asd-freemind.vercel.app/",
     siteName: "ASD FREE MIND",
@@ -48,7 +48,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "SportsActivityLocation",
     "name": "ASD FREE MIND",
-    "description": "L'eccellenza nella ginnastica artistica a Roma. Uniamo forza strutturale e precisione lineare per atleti del futuro.",
+    "description": "L'eccellenza nella ginnastica artistica a Roma. Corsi professionali e attività sportive inclusive e accessibili anche per portatori di handicap.",
     "url": "https://asd-freemind.vercel.app/",
     "telephone": `+39 ${Address.numero}`,
     "email": Address.email,
@@ -73,16 +73,20 @@ export default function RootLayout({
       },
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Saturday", 
+        "dayOfWeek": "Saturday",
         "opens": "09:00",
-        "closes": "18:00"     
+        "closes": "18:00"
       }
     ],
     "sameAs": [
       "https://www.instagram.com/a.s.d.freemind/",
       "https://www.facebook.com/ASDFREEMIND/"
     ],
-    "knowsAbout": ["Ginnastica Artistica", "Allenamento Sportivo", "Tecnologia applicata allo sport"],
+    "knowsAbout": ["Ginnastica Artistica", "Allenamento Sportivo", "Tecnologia applicata allo sport",
+      "Sport Inclusivo",
+      "Ginnastica per disabili",
+      "Corsi sportivi accessibili Roma",
+      "Attività motoria adattata", "Handicap", "Sport per tutti", "sport inclusivo per disabili", "corsi convenzionati","sport per disabili Roma"],
     "vatID": Address.partitaiva
   };
 
