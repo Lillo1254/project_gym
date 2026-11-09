@@ -50,6 +50,7 @@ export default function Navbar() {
           <Link href="/competizioni" className={getLinkClasses("/competizioni")}>Competizioni</Link>
           <Link href="/contact" className={getLinkClasses("/contact")}>Contatti</Link>
           <Link href="/chi-siamo" className={getLinkClasses("/chi-siamo")}>About Us</Link>
+          <Link href="/lavora-con-noi" className={getLinkClasses("/lavora-con-noi")} onClick={() => setIsOpen(false)}>Lavora con noi</Link>
           <a href={`mailto:${Address.email}`} className="bg-secondary px-5 py-2 rounded-full font-bold hover:scale-105 transition duration-300 text-white">ISCRIVITI</a>
 
         </div>
@@ -78,6 +79,7 @@ export default function Navbar() {
           <Link href="/competizioni" className={getLinkClasses("/competizioni")} onClick={() => setIsOpen(false)}>Competizioni</Link>
           <Link href="/contact" className={getLinkClasses("/contact")} onClick={() => setIsOpen(false)}>Contatti</Link>
           <Link href="/chi-siamo" className={getLinkClasses("/chi-siamo")} onClick={() => setIsOpen(false)}>About Us</Link>
+          <Link href="/lavora-con-noi" className={getLinkClasses("/lavora-con-noi")} onClick={() => setIsOpen(false)}>Lavora con noi</Link>
           <a href={`mailto:${Address.email}`} className="bg-secondary px-5 py-2 rounded-full font-bold hover:scale-105 transition duration-300 text-white">ISCRIVITI</a>
         </div>
       </div>

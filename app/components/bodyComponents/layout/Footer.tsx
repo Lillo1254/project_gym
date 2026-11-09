@@ -1,7 +1,10 @@
 import { MapPin, Phone, Mail, Hash } from 'lucide-react';
-import { FaFacebook, FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaInstagram , FaHome, FaInfoCircle, FaTrophy} from "react-icons/fa";
+import { MdOutlineWork } from "react-icons/md";
+import { CgGym } from "react-icons/cg";
 import Image from 'next/image';
 import Address from "@/app/components/bodyComponents/layout/Address";
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -14,6 +17,42 @@ export default function Footer() {
             <h2 className="text-2xl font-black tracking-tighter uppercase italic text-quarto">
               ASD <span className="text-secondary">FREE</span> MIND
             </h2>
+<div className="space-y-3">
+              <h3 className="font-bold uppercase tracking-widest text-secondary text-sm">Link Rapidi</h3>
+              <ul className="space-y-2.5">
+                <li>
+                  <Link href="/" className="flex items-center gap-3 text-white hover:text-secondary transition text-sm group">
+                    <FaHome className="text-secondary shrink-0" size={16} />
+                    <span>Home</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/" className="flex items-center gap-3 text-white hover:text-secondary transition text-sm group">
+                    <CgGym className="text-secondary shrink-0" size={16} />
+                    <span>Ginnastica</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/" className="flex items-center gap-3 text-white hover:text-secondary transition text-sm group">
+                    <FaTrophy className="text-secondary shrink-0" size={16} />
+                    <span>Competizioni</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/" className="flex items-center gap-3 text-white hover:text-secondary transition text-sm group">
+                    <FaInfoCircle className="text-secondary shrink-0" size={16} />
+                    <span>About us</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/lavora-con-noi" className="flex items-center gap-3 text-white hover:text-secondary transition text-sm group">
+                    <MdOutlineWork  className="text-secondary shrink-0" size={16} />
+                    <span>Lavora con Noi</span>
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
             <p className="text-white text-sm leading-relaxed">
               L&apos;eccellenza nella ginnastica artistica. Uniamo forza strutturale e precisione lineare per atleti del futuro.
             </p>
@@ -29,15 +68,15 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-center space-x-3 group">
                 <Phone size={18} className="text-secondary" />
-                <a href={`tel:${Address.numero}`} className="text-white hover:text-tertiary transition">{Address.numero}</a>
+                <a href={`tel:${Address.numero}`} className="text-white hover:text-secondary transition">{Address.numero}</a>
               </li>
               <li className="flex items-center space-x-3 group">
                 <Mail size={18} className="text-secondary" />
-                <a href={`mailto:${Address.email}`} className="text-white hover:text-tertiary transition">{Address.email}</a>
+                <a href={`mailto:${Address.email}`} className="text-white hover:text-secondary transition">{Address.email}</a>
               </li>
               <li className="flex items-center space-x-3 group">
                 <Mail size={18} className="text-secondary" />
-                <a href={`mailto:${Address.pec}`} className="text-white hover:text-tertiary transition">{Address.pec}</a>
+                <a href={`mailto:${Address.pec}`} className="text-white hover:text-secondary transition">{Address.pec}</a>
               </li>
               <li className="flex items-center space-x-3">
                 <MapPin size={18} className="text-secondary" />
@@ -70,6 +109,7 @@ export default function Footer() {
               >
                 <FaFacebook size={20} />
               </a>
+              
 
             </div>
           </div>
@@ -78,13 +118,6 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="font-bold uppercase tracking-widest text-secondary text-sm">Posizione</h3>
             <div className="w-full h-40 rounded-sm overflow-hidden grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-500 border border-quarto/20">
-              {/*               <iframe
-                src="https://www.google.com/maps/place/Via+Licinio+Murena,+36,+00175+Roma+RM,+Italia/@41.8623441,12.5522835,17z/data=!3m1!4b1!4m6!3m5!1s0x132f627513cdcc21:0xb89a71a15f747b42!8m2!3d41.8623401!4d12.5548584!16s%2Fg%2F11q2xl0nb5?hl=it-IT&entry=ttu&g_ep=EgoyMDI2MDkwOC4wIKXMDSoASAFQAw%3D%3D"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                loading="lazy"
-              ></iframe> */}
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2971.418384555855!2d12.552283476560923!3d41.862344066399785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f627513cdcc21%3A0xb89a71a15f747b42!2sVia%20Licinio%20Murena%2C%2036%2C%2000175%20Roma%20RM%2C%20Italia!5e0!3m2!1sit!2sus!4v1789124435866!5m2!1sit!2sus"
                 width="100%"
                 height="100%"

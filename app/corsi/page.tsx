@@ -77,6 +77,48 @@ const Corsi2 = [
     "focus": "Regolamentazione, fondamenta del gioco e partite amatoriali",
     "intensita": "Medio-Bassa",
     "descrizione": "Corso di avviamento al calcio a 5 per ragazzi sotto i 13 anni, incentrato sulle prime fasi del gioco, sulla comprensione delle regole e su partite amatoriali formative."
+  },
+  {
+    "id": 6,
+    "nome": "Pallavolo",
+    "focus": "Allenamento tecnico e partite amatoriali",
+    "intensita": "Media",
+    "descrizione": "Corso di pallavolo per ragazzi e adulti, focalizzato sull'allenamento tecnico, la comprensione delle regole e la partecipazione a partite amatoriali. Lunedi , Martedi, Giovedi e Venerdi"
+  },
+  {
+    "id": 7,
+    "nome": "Ballo Country",
+    "focus": "Balli di gruppo e country",
+    "intensita": "Media",
+    "descrizione": "Corso di ballo country con orario serale, presso scuola Pertini/Falcone via Rugantino 108 Roma."
+  },
+  {
+    "id": 8,
+    "nome": "Pallavolo",
+    "focus": "Allenamento tecnico e partite amatoriali",
+    "intensita": "Media",
+    "descrizione": "Corso di pallavolo per ragazzi e adulti, focalizzato sull'allenamento tecnico, la comprensione delle regole e la partecipazione a partite amatoriali. Lunedi, Martedi, Giovedi e Venerdi, presso scuola Schweitzer via Messina Roma."
+  },
+  {
+    "id": 9,
+    "nome": "Diversamente Basket",
+    "focus": "Attività motoria e pallacanestro inclusiva",
+    "intensita": "Media",
+    "descrizione": "Corso di diversamente basket. Giovedi, presso Scuola Elementare Marcati via Rugantino 88 Roma."
+  },
+  {
+    "id": 10,
+    "nome": "Funzionale",
+    "focus": "Allenamento e tonificazione muscolare",
+    "intensita": "Alta",
+    "descrizione": "Corso di ginnastica funzionale. Martedi e Giovedi, presso Scuola Elementare Marcati via Rugantino 88 Roma."
+  },
+  {
+    "id": 11,
+    "nome": "Ginnastica Ritmica",
+    "focus": "Coordinazione, flessibilità ed espressività corporea",
+    "intensita": "Media",
+    "descrizione": "Corso di ginnastica ritmica. Lunedi, Mercoledi e Giovedi, presso Scuola Ponti via Vitaliano Ponti 30 Roma."
   }
 ]
 
