@@ -1,10 +1,9 @@
-import Link from 'next/link';
-import { Mail, Phone, Briefcase, Send, Paperclip } from 'lucide-react';
+import { Mail, Send, Paperclip } from 'lucide-react';
 
 export default function LavoraConNoiPage() {
 
 
-  const emailDestinatario = "asd.freemind@gmail.com";
+  const emailDestinatario = "asdfm.artistica@gmail.com";
   const oggettoEmail = encodeURIComponent("Candidatura spontanea / Collaborazione - ASD Free Mind");
   const corpoEmail = encodeURIComponent(
     "Salve ASD Free Mind,\n\n" +
